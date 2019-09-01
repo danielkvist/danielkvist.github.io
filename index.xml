@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dkvist</title>
+    <link>/</link>
+    <description>Recent content on Dkvist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bots, bots and botio</title>
+      <link>/posts/bots-bots-botio/</link>
+      <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bots-bots-botio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hello there If you&amp;rsquo;re reading this I guess it&amp;rsquo;s because you&amp;rsquo;ve asked yourself the same question that I&amp;rsquo;ve sometimes asked myself at 3 o&amp;rsquo;clock in the morning: &amp;ldquo;Who am I?&amp;rdquo;. And although the answer to such questions is always complicated, I will try to answer as simply as possible.
+Who I am now, right now I&amp;rsquo;m a 25-year-old boy who has decided that his next job is going to be as a developer.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>To contact me you can send me an email to: danielkvist@protonmail.com.
+Every morning and evening I check the mail so you can expect an answer from me every day in that timeframe. Except obviously if it&amp;rsquo;s something important like a job offer or a problem with some of my open source projects.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>You can find all my projects with their code in my GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>
