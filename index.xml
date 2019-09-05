@@ -6,10 +6,20 @@
     <description>Recent content on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linked lists on Go</title>
+      <link>/posts/linked-lists-golang/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/linked-lists-golang/</guid>
+      <description>What is a Linked list Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:
+ A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.</description>
+    </item>
     
     <item>
       <title>Hello world</title>

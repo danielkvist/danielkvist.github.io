@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Linked lists on Go :: Dkvist — Gopher &amp; Ukulelist</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="What is a Linked list Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:
+ A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence."/>
+<meta name="keywords" content="go, golang, developer, dev, job"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/linked-lists-golang/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Linked lists on Go :: Dkvist — Gopher &amp; Ukulelist" />
+<meta name="twitter:description" content="What is a Linked list Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:
+ A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Danielkvist" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Linked lists on Go :: Dkvist — Gopher &amp; Ukulelist">
+<meta property="og:description" content="What is a Linked list Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:
+ A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence." />
+<meta property="og:url" content="/posts/linked-lists-golang/" />
+<meta property="og:site_name" content="Linked lists on Go" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-09-05 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Dkvist
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/linked-lists-golang/">Linked lists on Go</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-09-05
+    </span>
+    
+    
+    <span class="post-author">::
+      Danielkvist
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/go/">go</a>&nbsp;
+    
+    #<a href="/tags/data-structure/">data structure</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="what-is-a-linked-list">What is a Linked list</h2>
+
+<p>Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:</p>
+
+<blockquote>
+<p>A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.</p>
+</blockquote>
+
+<h2 id="why-we-want-to-build-use-linked-lists">Why we want to build/use Linked lists</h2>
+
+<p>Maybe you&rsquo;re wondering: &ldquo;If all we want is a list of adjacent elements&hellip; Why not use an array or a slice directly?&rdquo;.<br />
+And the short answer to that question is that it&rsquo;s generally better and simpler to just use a slice.</p>
+
+<p>The long answer actually looks pretty much like the short one but adding at the end an &ldquo;although this is not always the case&rdquo;.</p>
+
+<p>So&hellip; When do we want to use linked lists? Well, the reality is that linked lists have some advantages over arrays and slices, for example:</p>
+
+<ul>
+<li>In a linked list elements can be easily inserted and removed without reallocation (that is because linked lists need not be stored contiguously in memory).</li>
+<li>Linked lists also allows to insert or remove nodes at any point in the list in a constant number of operations.</li>
+</ul>
+
+<p>For these reasons, stacks, queues and very simple cache systems are usually implemente using linked lists.</p>
+
+<h2 id="how-can-we-build-a-linked-list">How can we build a Linked list</h2>
+
+<p>To implemente a linked list in Go, we will first define it&rsquo;s basic component: the node.</p>
+
+<h3 id="defining-a-node">Defining a Node</h3>
+
+<p>As we saw in the definition of the Wikipedia:</p>
+
+<blockquote>
+<p>[&hellip;] each node contains: data, and a reference (in other words, a link) to the next node in the sequence.</p>
+</blockquote>
+
+<p>So our Node implementation could be something like this:</p>
+
+<pre><code class="language-go">type Node struct {
+    value int   // Our data
+    next  *Node // Pointer (link) to the next Node in the list
+}
+</code></pre>
+
+<h3 id="defining-a-linked-list">Defining a Linked list</h3>
+
+<p>Our implementation of a linked list should then, be something like this:</p>
+
+<pre><code class="language-go">type LinkedList struct {
+    first  *Node // The first node
+    last   *Node // The last node
+    length int   // The number of nodes
+}
+</code></pre>
+
+<blockquote>
+<p>The <em>last</em> field in our implementation is to make it easier to insert (append) new nodes to the end of our linked list.</p>
+</blockquote>
+
+<h3 id="append">Append</h3>
+
+<pre><code class="language-go">func (l *LinkedList) Append(n *Node) {
+    // We check if our linked list is empty
+    if l.length == 0 {
+        l.first = n // If it is, we set the first node to the new node
+        l.last = n  // We also set the last node to the new node
+        l.length++  // Finally, we increment the length
+        return
+    }
+
+    l.last.next = n // We link our last node to out new last node
+    l.last = n      // Then, we set the last node node to the new node
+    l.length++      // And finally, we increment the length
+}
+</code></pre>
+
+<h3 id="prepend">Prepend</h3>
+
+<pre><code class="language-go">func (l *LinkedList) Prepend(n *Node) {
+    // As in Append, first we check if the linked list is empy
+    if l.length == 0 {
+        l.first = n // If it is, we set the first node the new node
+        l.last = n  // We also set the last node to the new node
+        l.length++  // Finally, we increment the length
+        return
+    }
+
+    firstNode := l.first     // We save our old first node in a temporal variable
+    l.first = n              // Then, we set the first node to the new node
+    l.first.next = firstNode // Finally we linke the new first node to the old one
+    l.length++               // And then, we increment the length
+}
+</code></pre>
+
+<h3 id="lookup">Lookup</h3>
+
+<pre><code class="language-go">func (l *LinkedList) Lookup() []int {
+    // If the list is empty we return nil
+    if l.length == 0 {
+        return nil
+    }
+
+    var nodes []int
+    node := l.first
+
+    // If the next node is nil (doesn't exist) it means that
+    // we're done.
+    for node != nil {
+        nodes = append(nodes, node.value)
+        node = node.next
+    }
+
+    return nodes // Then, we can return the slice with all the values found
+}
+</code></pre>
+
+<p>Our Lookup implementation may not be the most correct one. But now that you&rsquo;ve seen the base, it should be easy for you to modify it according to your needs.</p>
+
+<h3 id="delete">Delete</h3>
+
+<pre><code class="language-go">func (l *LinkedList) Delete(v int) {
+    // If the list is empty we have nothing to delete.
+    if l.length == 0 {
+        return
+    }
+
+    // If instead, the node to delete is the first one of our list
+    // we can remove it directly.
+    if l.first.value == v {
+        l.first = l.first.next // We set the first node to the second node
+        l.length--             // Then, we decrement the length of our list
+        return
+    }
+
+    var prevNode *Node // A reference to the previous node of the one we are looking for
+    node := l.first
+    for node.value != v {
+        // If we have reached the end of the list it means that
+        // our node doesn't exist and that we have nothing to remove.
+        if node == nil {
+            return
+        }
+
+        prevNode = node
+        node = node.next
+    }
+
+    prevNode.next = node.next // We remove the node by removing the reference to it from the previous one
+    l.length--                // Finally, we decrement the length
+}
+</code></pre>
+
+<h2 id="go-playground">Go Playground</h2>
+
+<p>You can find all the code <a href="https://play.golang.org/p/fTPXz3KhIqK">here</a>.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Linked_list">Wikipedia&rsquo;s page</a>.</li>
+<li><a href="https://ieftimov.com/post/golang-datastructures-linked-lists/">Ilija Eftimov&rsquo;s incredible post</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=njTh_OwMljA">HackerRank&rsquo;s video</a>.</li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/hello-world/">
+          <span class="button__text">Hello world</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
