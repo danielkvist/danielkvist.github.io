@@ -6,10 +6,20 @@
     <description>Recent content in data structure on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data-structure/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Doubly linked lists in Go</title>
+      <link>/posts/double-linked-lists-golang/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/double-linked-lists-golang/</guid>
+      <description>What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
+ A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field.</description>
+    </item>
     
     <item>
       <title>Linked lists in Go</title>

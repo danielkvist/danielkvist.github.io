@@ -161,7 +161,7 @@
 <p>Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:</p>
 
 <blockquote>
-<p>A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.</p>
+<p>A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each Node contains: data, and a reference (in other words, a link) to the next Node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.</p>
 </blockquote>
 
 <h2 id="why-we-want-to-build-use-linked-lists">Why we want to build/use Linked lists</h2>
@@ -171,28 +171,28 @@ And the short answer to that question is that it&rsquo;s generally better and si
 
 <p>The long answer actually looks pretty much like the short one but adding at the end an &ldquo;although this is not always the case&rdquo;.</p>
 
-<p>So&hellip; When do we want to use linked lists? Well, the reality is that linked lists have some advantages over arrays and slices, for example:</p>
+<p>So&hellip; When do we want to use Linked lists? Well, the reality is that linked lists have some advantages over arrays and slices, for example:</p>
 
 <ul>
-<li>In a linked list elements can be easily inserted and removed without reallocation (that is because linked lists need not be stored contiguously in memory).</li>
+<li>In a Linked list elements can be easily inserted and removed without reallocation (that is because Linked lists need not be stored contiguously in memory).</li>
 <li>Linked lists also allows to insert or remove nodes at any point in the list in a constant number of operations.</li>
 </ul>
 
-<p>For these reasons, stacks, queues and very simple cache systems are usually implemente using linked lists.</p>
+<p>For these reasons, stacks, queues and very simple cache systems are usually implemente using Linked lists.</p>
 
 <h2 id="how-can-we-build-a-linked-list">How can we build a Linked list</h2>
 
-<p>To implemente a linked list in Go, we will first define it&rsquo;s basic component: the node.</p>
+<p>To implement a Linked list in Go, we will first define it&rsquo;s basic component: the <em>Node</em>.</p>
 
 <h3 id="defining-a-node">Defining a Node</h3>
 
 <p>As we saw in the definition of the Wikipedia:</p>
 
 <blockquote>
-<p>[&hellip;] each node contains: data, and a reference (in other words, a link) to the next node in the sequence.</p>
+<p>[&hellip;] each Node contains: data, and a reference (in other words, a link) to the next Node in the sequence.</p>
 </blockquote>
 
-<p>So our Node implementation could be something like this:</p>
+<p>So our <em>Node</em> implementation could be something like this:</p>
 
 <pre><code class="language-go">type Node struct {
     value int   // Our data
@@ -202,32 +202,32 @@ And the short answer to that question is that it&rsquo;s generally better and si
 
 <h3 id="defining-a-linked-list">Defining a Linked list</h3>
 
-<p>Our implementation of a linked list should then, be something like this:</p>
+<p>Our implementation of a Linked list should then, be something like this:</p>
 
 <pre><code class="language-go">type LinkedList struct {
-    first  *Node // The first node
-    last   *Node // The last node
+    first  *Node // The first Node
+    last   *Node // The last Node
     length int   // The number of nodes
 }
 </code></pre>
 
 <blockquote>
-<p>The <em>last</em> field in our implementation is to make it easier to insert (append) new nodes to the end of our linked list.</p>
+<p>The <em>last</em> field in our implementation is to make it easier to insert (append) new Nodes to the end of our Linked list.</p>
 </blockquote>
 
 <h3 id="append">Append</h3>
 
 <pre><code class="language-go">func (l *LinkedList) Append(n *Node) {
-    // We check if our linked list is empty
+    // We check if our Linked list is empty
     if l.length == 0 {
-        l.first = n // If it is, we set the first node to the new node
-        l.last = n  // We also set the last node to the new node
+        l.first = n // If it is, we set the first Node to the new Node
+        l.last = n  // We also set the last Node to the new Node
         l.length++  // Finally, we increment the length
         return
     }
 
-    l.last.next = n // We link our last node to out new last node
-    l.last = n      // Then, we set the last node node to the new node
+    l.last.next = n // We link our last Node to out new last Node
+    l.last = n      // Then, we set the last Node Node to the new Node
     l.length++      // And finally, we increment the length
 }
 </code></pre>
@@ -237,15 +237,15 @@ And the short answer to that question is that it&rsquo;s generally better and si
 <pre><code class="language-go">func (l *LinkedList) Prepend(n *Node) {
     // As in Append, first we check if the linked list is empy
     if l.length == 0 {
-        l.first = n // If it is, we set the first node the new node
-        l.last = n  // We also set the last node to the new node
+        l.first = n // If it is, we set the first Node the new Node
+        l.last = n  // We also set the last Node to the new Node
         l.length++  // Finally, we increment the length
         return
     }
 
-    firstNode := l.first     // We save our old first node in a temporal variable
-    l.first = n              // Then, we set the first node to the new node
-    l.first.next = firstNode // Finally we linke the new first node to the old one
+    firstNode := l.first     // We save our old first Node in a temporal variable
+    l.first = n              // Then, we set the first Node to the new Node
+    l.first.next = firstNode // Finally we linke the new first Node to the old one
     l.length++               // And then, we increment the length
 }
 </code></pre>
@@ -261,7 +261,7 @@ And the short answer to that question is that it&rsquo;s generally better and si
     var nodes []int
     node := l.first
 
-    // If the next node is nil (doesn't exist) it means that
+    // If the next Node is nil (doesn't exist) it means that
     // we're done.
     for node != nil {
         nodes = append(nodes, node.value)
@@ -272,7 +272,7 @@ And the short answer to that question is that it&rsquo;s generally better and si
 }
 </code></pre>
 
-<p>Our Lookup implementation may not be the most correct one. But now that you&rsquo;ve seen the base, it should be easy for you to modify it according to your needs.</p>
+<p>Our <em>Lookup</em> implementation may not be the most correct one. But now that you&rsquo;ve seen the base, it should be easy for you to modify it according to your needs.</p>
 
 <h3 id="delete">Delete</h3>
 
@@ -282,19 +282,19 @@ And the short answer to that question is that it&rsquo;s generally better and si
         return
     }
 
-    // If instead, the node to delete is the first one of our list
+    // If instead, the Node to delete is the first one on our list
     // we can remove it directly.
     if l.first.value == v {
-        l.first = l.first.next // We set the first node to the second node
+        l.first = l.first.next // We set the first Node to the second Node
         l.length--             // Then, we decrement the length of our list
         return
     }
 
-    var prevNode *Node // A reference to the previous node of the one we are looking for
+    var prevNode *Node // A reference to the previous Node of the one we are looking for
     node := l.first
     for node.value != v {
         // If we have reached the end of the list it means that
-        // our node doesn't exist and that we have nothing to remove.
+        // our Node doesn't exist and that we have nothing to remove.
         if node == nil {
             return
         }
@@ -303,7 +303,7 @@ And the short answer to that question is that it&rsquo;s generally better and si
         node = node.next
     }
 
-    prevNode.next = node.next // We remove the node by removing the reference to it from the previous one
+    prevNode.next = node.next // We remove the Node by removing the reference to it from the previous one
     l.length--                // Finally, we decrement the length
 }
 </code></pre>
@@ -329,6 +329,13 @@ And the short answer to that question is that it&rsquo;s generally better and si
       <hr />
     </div>
     <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="/posts/double-linked-lists-golang/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Doubly linked lists in Go</span>
+        </a>
+      </span>
       
       
       <span class="button next">
