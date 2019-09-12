@@ -58,7 +58,7 @@ Who I am now, right now I&amp;rsquo;m a 25-year-old boy who has decided that his
       
       <guid>/contact/</guid>
       <description>To contact me you can send me an email to: danielkvist@protonmail.com.
-Every morning and evening I check the mail so you can expect an answer from me every day in that timeframe.
+Every morning and evening I check the mail so you can expect an answer from me every day in that time frame.
 If you have had any problems or have any suggestions for the different projects I have in my GitHub please do not send me an email. Open a new issue in the correspondent repository.</description>
     </item>
     
@@ -68,7 +68,8 @@ If you have had any problems or have any suggestions for the different projects 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>You can find all my projects with their code in my GitHub.</description>
+      <description>Here is a list with my most recent projects. You can find the rest of them in my GitHub account.
+Botio Botio is a simple and opinionated CLI to create and manage easily bots for different platforms. It allows the user to create easily a server with a REST API to manage a list of commands that then, clients such as a Telegram bot can use to reply to users of that bot.</description>
     </item>
     
   </channel>
