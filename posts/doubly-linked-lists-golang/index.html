@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Doubly linked lists in Go :: Dkvist — Gopher &amp; Ukulelist</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
+ A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field."/>
+<meta name="keywords" content="go, golang, developer, dev, job"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/doubly-linked-lists-golang/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Doubly linked lists in Go :: Dkvist — Gopher &amp; Ukulelist" />
+<meta name="twitter:description" content="What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
+ A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Danielkvist" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Doubly linked lists in Go :: Dkvist — Gopher &amp; Ukulelist">
+<meta property="og:description" content="What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
+ A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field." />
+<meta property="og:url" content="/posts/doubly-linked-lists-golang/" />
+<meta property="og:site_name" content="Doubly linked lists in Go" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-09-08 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Dkvist
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/doubly-linked-lists-golang/">Doubly linked lists in Go</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-09-08
+    </span>
+    
+    
+    <span class="post-author">::
+      Danielkvist
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/go/">go</a>&nbsp;
+    
+    #<a href="/tags/data-structure/">data structure</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="what-is-a-doubly-linked-list">What is a Doubly linked list</h2>
+
+<p>Like <a href="/posts/linked-lists-golang/">Linked lists</a>, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:</p>
+
+<blockquote>
+<p>A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field.</p>
+</blockquote>
+
+<p>Basically now our <em>Node</em> struct will have a value, a link to the next Node in the list and another link to the previous one.</p>
+
+<h2 id="doubly-linked-lists-vs-linked-lists">Doubly linked lists VS Linked lists</h2>
+
+<p>Doubly linked lists have an important difference over Linked lists: <strong>they can be traversed in forward or backwards directions</strong>.</p>
+
+<p>With Doubly linked lists is also more easy insert new Nodes before existing ones.</p>
+
+<p>But Doubly linked lists are not perfect and have disadvantages over Linked lists:</p>
+
+<ul>
+<li>Each <em>Node</em> requires extra space due to the extra pointer.</li>
+<li>All operations become a little more complicated because you have to manage now the extra pointer.</li>
+</ul>
+
+<h2 id="how-can-we-build-a-doubly-linked-list">How can we build a Doubly linked list</h2>
+
+<p>To implement a Doubly linked list in Go we need to start defining it&rsquo;s basic component: the <em>Node</em>.</p>
+
+<h3 id="defining-a-node">Defining a Node</h3>
+
+<pre><code class="language-go">Type Node struct {
+    value int   // Our data
+    pre   *Node // Pointer to the previous Node
+    next *Node  // Pointer to the next Node
+}
+</code></pre>
+
+<h3 id="defining-a-doubly-linked-list">Defining a Doubly linked list</h3>
+
+<pre><code class="language-go">Type DoublyLinkedList struct {
+    head   *Node // The first node
+    tail   *Node // The last node
+    length int   // The number of nodes
+}
+</code></pre>
+
+<h3 id="append">Append</h3>
+
+<pre><code class="language-go">// Append adds a *Node to the end of the DoublyLinkedList
+func (dl *DoublyLinkedList) Append(n *Node) {
+    // We check if our Doubly linked list is empty
+    if dl.length == 0 {
+        // If it is we set the first and the last node
+        // to the new one and finally we increment the length.
+        dl.first = n
+        dl.last = n
+        dl.length++
+        return
+    }
+
+    // If no, we save the pointer of the last Node in the list.
+    lastNode := dl.last
+
+    // Then, we update the last node (tail) in our Doubly linked list
+    // with the new Node, connecting it to the previous last Node
+    // and also connecting our previous last Node to the new one.
+    // Finally, we only need to increment the length.
+    dl.last = n
+    dl.last.pre = lastNode
+    lastNode.next = n
+    dl.length++
+}
+</code></pre>
+
+<h3 id="prepend">Prepend</h3>
+
+<pre><code class="language-go">// Prepend adds a *Node to the start of the DoublyLinkedList
+func (dl *DoublyLinkedList) Prepend(n *Node) {
+    // We check if our Doubly linked list is empty
+    if dl.length == 0 {
+        // If it is we set the first and last node
+        // to the new one and finally we increment the length.
+        dl.first = n
+        dl.last = n
+        dl.length++
+        return
+    }
+
+    // If out list is not empty, we save the pointer of the
+    // first Node in the list.
+    preFirstNode := dl.first
+
+    // Then, we update the first node (head) in our Doubly linked list
+    // with the new Node, connecting it to the previous first Node
+    // and also connecting our previous first Node to the new one.
+    // Finally, we only need to increment the length.
+    dl.first = n
+    dl.first.next = preFirstNode
+    preFirstNode.pre = n
+    dl.length++
+}
+</code></pre>
+
+<h3 id="lookup">Lookup</h3>
+
+<pre><code class="language-go">// Lookup ranges over the DoublyLinkedLIst and returns
+// a []int with all the values found.
+func (dl *DoublyLinkedList) Lookup() []int {
+    if dl.length == 0 {
+        // If our list is empty we simply return nil
+        return nil
+    }
+
+    // If not, we range over the nodes saving each node's value
+    // into a slice which we'll return.
+    var nodes []int
+    node := dl.first
+
+    // If the next Node is nil it means that we are
+    // done.
+    for node != nil {
+        nodes = append(nodes, node.value)
+        node = node.next
+    }
+
+    return nodes
+}
+</code></pre>
+
+<h3 id="delete">Delete</h3>
+
+<pre><code class="language-go">// Delete removes a Node from the doubly linked list with the
+// same value as the received.
+func (dl *DoublyLinkedList) Delete(v int) {
+    if dl.length == 0 {
+        // If our list is empty we simply return
+        return
+    }
+
+    // If the Node to remove is the first one on our
+    // list we remove it directly and then return.
+    if dl.first.value == v {
+        dl.first = dl.first.next
+        dl.first.pre = nil
+        dl.length--
+        return
+    }
+
+    // If the Node to remove is the last one on our
+    // list we remove it directly and return.
+    if dl.last.value == v {
+        prePreLastNode := dl.last.pre
+        dl.last = prePreLastNode
+        prePreLastNode.next = nil
+        dl.length--
+        return
+    }
+
+    // Finally, if the first Node nor the last Node are the nodes
+    // we are looking for, we range over the list trying to find
+    // it. If the Node don't exist we simply return. If exists we
+    // simply remove it removing it's pointers from the previous
+    // node and the next.
+    var prevNode *Node
+    var nextNode *Node
+    node := dl.first
+
+    for node.value != v {
+        if node == nil {
+            return
+        }
+
+        prevNode = node
+        node = node.next
+        nextNode = node.next
+    }
+
+    prevNode.next = node.next
+    nextNode.pre = prevNode
+
+    // In each case we have to remember to decrease the lenght.
+    dl.length--
+}
+</code></pre>
+
+<h2 id="go-playground">Go playground</h2>
+
+<p>You can find all the code <a href="https://play.golang.org/p/2o6lphXSX5G">here</a>.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Doubly_linked_list">Wikipedia&rsquo;s page</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=njTh_OwMljA">HackerRank&rsquo;s video about Linked lists and Doubly linked lists</a>.</li>
+<li><a href="/posts/linked-lists-golang/">Linked lists article</a>.</li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/linked-lists-golang/">
+          <span class="button__text">Linked lists in Go</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

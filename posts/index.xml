@@ -13,10 +13,10 @@
     
     <item>
       <title>Doubly linked lists in Go</title>
-      <link>/posts/double-linked-lists-golang/</link>
+      <link>/posts/doubly-linked-lists-golang/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/double-linked-lists-golang/</guid>
+      <guid>/posts/doubly-linked-lists-golang/</guid>
       <description>What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
  A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field.</description>
     </item>
