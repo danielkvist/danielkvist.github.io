@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Finding dead links in a Website with Go :: Dkvist — Gopher &amp; Ukulelist</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="First things first The idea behind this article comes from my experience building Kelsier, which idea itself comes from this article.
+The code that I&amp;rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&amp;rsquo;t think is entirely ideal or there&amp;rsquo;s something you know can be done in a better way, let me know by opening an issue in the repository of this site."/>
+<meta name="keywords" content="go, golang, developer, dev, job"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/findind-dead-links-with-golang/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Finding dead links in a Website with Go :: Dkvist — Gopher &amp; Ukulelist" />
+<meta name="twitter:description" content="First things first The idea behind this article comes from my experience building Kelsier, which idea itself comes from this article.
+The code that I&amp;rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&amp;rsquo;t think is entirely ideal or there&amp;rsquo;s something you know can be done in a better way, let me know by opening an issue in the repository of this site." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Danielkvist" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Finding dead links in a Website with Go :: Dkvist — Gopher &amp; Ukulelist">
+<meta property="og:description" content="First things first The idea behind this article comes from my experience building Kelsier, which idea itself comes from this article.
+The code that I&amp;rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&amp;rsquo;t think is entirely ideal or there&amp;rsquo;s something you know can be done in a better way, let me know by opening an issue in the repository of this site." />
+<meta property="og:url" content="/posts/findind-dead-links-with-golang/" />
+<meta property="og:site_name" content="Finding dead links in a Website with Go" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-09-19 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Dkvist
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/findind-dead-links-with-golang/">Finding dead links in a Website with Go</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-09-19
+    </span>
+    
+    
+    <span class="post-author">::
+      Danielkvist
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/go/">go</a>&nbsp;
+    
+    #<a href="/tags/tutorial/">tutorial</a>&nbsp;
+    
+    #<a href="/tags/web/">web</a>&nbsp;
+    
+    #<a href="/tags/scraping/">scraping</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="first-things-first">First things first</h2>
+
+<p>The idea behind this article comes from my experience building <a href="https://github.com/danielkvist/kelsier">Kelsier</a>, which idea itself comes from <a href="https://dev.to/healeycodes/build-a-python-bot-to-find-your-website-s-dead-links-563c">this article</a>.</p>
+
+<p>The code that I&rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&rsquo;t think is entirely ideal or there&rsquo;s something you know can be done in a better way, let me know by opening an issue in the <a href="https://github.com/danielkvist/danielkvist.github.io">repository of this site</a>.</p>
+
+<h2 id="what-is-a-web-scraper">What is a Web scraper</h2>
+
+<p>All starts with <a href="https://en.wikipedia.org/wiki/Data_scraping">Data scraping</a>. Which is basically an operation in which a computer program extracts information from the output of another program which output itself was intended to be displayed to an end-user, not passed to another program.</p>
+
+<p>Data scraping applied to Web is called <a href="https://en.wikipedia.org/wiki/Web_scraping">Web scraping</a>. And I think you can pretty much see where things are going. Web scraping could be define as the act of extracting and processing information from a website that, for example, does not provide other more easy ways of extracting data such as an API. In our case, what we want is extract all the links to check if they are dead and therefore should be fixed or not.</p>
+
+<blockquote>
+<p>Web scraping is actually a much deeper topic than simply extracting links from a web page, so I&rsquo;ll try to leave you some links at the end of the article if you want to explore more about the subject.</p>
+</blockquote>
+
+<h2 id="what-is-a-dead-link-and-why-we-want-to-find-them">What is a dead link and why we want to find them</h2>
+
+<p>A dead link is basically a link that doesn&rsquo;t work anymore. This usually happens when the page or resource the links was pointing to no longer exists.</p>
+
+<p>One of the main reasons why we would want to find and fix all the dead links on a website is due to its negative effects on the SEO.</p>
+
+<h2 id="building-our-web-scraper">Building our Web scraper</h2>
+
+<p>In our case, the web scraper that we are going to build is going to be very simple. First, it will receive an URL that after checking that it&rsquo;s valid will be used to make an HTTP GET request. Next, we&rsquo;ll use the body of the response to try to extract all the links we can find. Finally, once we have finished extracting links, we&rsquo;ll parse each one one by one, check its status with another HTTP GET request and report it in the terminal. Easy, right?</p>
+
+<h3 id="getting-our-main-url-and-parsing-it">Getting our main URL and parsing it</h3>
+
+<p>To get our main URL we have two options:</p>
+
+<ul>
+<li>Use the <code>flag</code> package.</li>
+<li>Use the <code>os</code> package.</li>
+</ul>
+
+<p>Since at the moment the only thing we want to receive is a simple URL with no optional parameters we are going to use the <code>os</code> package.</p>
+
+<p>So let&rsquo;s start working in our <code>main.go</code> file:</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+    &quot;os&quot;
+)
+
+func main() {
+    fmt.Println(os.Args)
+}
+</code></pre>
+
+<p>If we now save our <code>main.go</code> file and execute it:</p>
+
+<pre><code class="language-bash">go run main.go google.com
+</code></pre>
+
+<p>We should see an output like this:</p>
+
+<pre><code class="language-text">[/tmp/go-build412963032/b001/exe/web-scraper google.com]
+</code></pre>
+
+<p>We are basically printing two things here:</p>
+
+<ol>
+<li>The name of our program.</li>
+<li>The first an unique argument of our program.</li>
+</ol>
+
+<blockquote>
+<p>As you can read in the <code>os</code> package <a href="https://golang.org/pkg/os/#pkg-variables">documentation</a>: &ldquo;Args hold the command-line arguments, starting with the program name.&rdquo;</p>
+</blockquote>
+
+<p>Since the only thing we need is the first argument, we can change our code to look like this:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+)
+
+func main() {
+	url := os.Args[1] // It will panic if there aren't enough arguments.
+	fmt.Println(url)
+}
+</code></pre>
+
+<p>And after saving and executing it again with the same parameter we should get:</p>
+
+<pre><code class="language-text">google.com
+</code></pre>
+
+<p>Perfect! Isn&rsquo;t it? Now let&rsquo;s make an HTTP request:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+)
+
+func main() {
+	// First, we check that we have enough arguments.
+	if len(os.Args) &lt; 1 {
+		log.Printf(&quot;not enough arguments provided&quot;)
+		os.Exit(1)
+	}
+
+	url := os.Args[1]
+	url = &quot;https://&quot; + url // We &quot;parse&quot; our URL.
+
+	// Then, we create a new HTTP GET request.
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Printf(&quot;while creating a new request for %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	// We also create an HTTP client to make the request.
+	client := &amp;http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Printf(&quot;while making request to %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	// We try to read the response's body.
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Printf(&quot;while reading the response body from %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	// And finally, if everything went okay, we just convert body from a []byte
+	// to an string and print it.
+	fmt.Println(string(body))
+}
+</code></pre>
+
+<p>If now we save and execute again we should get a very large blob of HTML code, which is a huge advance but not what we really want.</p>
+
+<h3 id="extracting-the-urls">Extracting the URLs</h3>
+
+<p>What we really want is to extract all the links in the HTML response. But before that it would be convenient to have clear the structure of a link in HTML:</p>
+
+<pre><code class="language-html">&lt;a href=&quot;/&quot; alt=&quot;home&quot;&gt;Home&lt;/a&gt;
+</code></pre>
+
+<p>As you can see, in HTML the links are defined with the <code>a</code> tag and normally have the <code>href</code> attribute.</p>
+
+<p>So now, we are gonna to improve our code and instead of convert the response&rsquo;s body into a string to print it, we are going to parse it and extract from it all the links found:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+
+	&quot;golang.org/x/net/html&quot;
+)
+
+func main() {
+	if len(os.Args) &lt;= 1 {
+		log.Printf(&quot;not enough arguments provided&quot;)
+		os.Exit(1)
+	}
+
+	url := os.Args[1]
+	url = &quot;https://&quot; + url
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Printf(&quot;while creating a new request for %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	client := &amp;http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Printf(&quot;while making request to %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+	// We defer the closing of our response's body.
+	defer resp.Body.Close()
+
+	// Then, we check that the status code of the response
+	// is 200 OK. If it's not we exit.
+	if resp.StatusCode != http.StatusOK {
+		log.Printf(&quot;response status is not %v&quot;, http.StatusOK)
+		os.Exit(1)
+	}
+
+	// Now we parse our response's body.
+	doc, err := html.Parse(resp.Body)
+	if err != nil {
+		log.Printf(&quot;while parsing the response body from %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	// And finally we extract all the links found and print them one
+	// by one.
+	links := findLinks(nil, doc)
+	for i, l := range links {
+		fmt.Println(i, l)
+	}
+}
+
+// findLinks is a recursive function, that means that it calls itself.
+// If you look at the code carefully you'll see that it's not really that complicated.
+func findLinks(links []string, n *html.Node) []string {
+	// We check that our HTML node is of type html.ElementNode and that
+	// our HTML node's data (tag) is a link (&quot;a&quot;).
+	if n.Type == html.ElementNode &amp;&amp; n.Data == &quot;a&quot; {
+		// Then, we range over the attributes of our node and when we find
+		// and &quot;href&quot; attribute we append its value to our links slice which
+		// later will be returned.
+		for _, a := range n.Attr {
+			if a.Key == &quot;href&quot; {
+				links = append(links, a.Val)
+			}
+		}
+	}
+
+	// Here we are basically ranging over our nodes and calling
+	// our function recursively.
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		links = findLinks(links, c)
+	}
+
+	// When we are over looping, we simply return all the links found.
+	return links
+}
+</code></pre>
+
+<p>When we are parsing our response&rsquo;s body we are getting a tree. There are ancestors, descendants, parents and childrens. But trees have a complication, it is not as easy to iterate over all its elements as it would be for example in a slice or in a <a href="/posts/linked-lists-golang/">linked list</a>. That&rsquo;s why we are using recursions instead of a for loop.</p>
+
+<blockquote>
+<p>If you want learn more about the <code>golang.org/x/net/html</code> or about the <code>html.Parse</code> function you can check the package documentation <a href="https://godoc.org/golang.org/x/net/html#Parse">here</a>. Also, the &lsquo;findLinks&rsquo; function is mainly extracted from the code examples of the <a href="http://www.gopl.io/">gopl</a> book. Book that by the way, I recommend.</p>
+</blockquote>
+
+<h3 id="formatting-our-urls">Formatting our URLs</h3>
+
+<p>Now that we have our links, it&rsquo;s time to make sure they&rsquo;re well formatted so we don&rsquo;t get false negatives. To format them, we are going to follow the following rules:</p>
+
+<ul>
+<li>If the link is <code>/</code>, we&rsquo;re going to change it to our base URL.</li>
+<li>If the link is something like <code>/about</code>, we&rsquo;re going to prepend our base URL.</li>
+<li>If the links is an anchor like <code>/#social</code> we&rsquo;re going to prepend our base URL.</li>
+</ul>
+
+<p>To do this, we&rsquo;re going to create a function called <code>formatURL</code>:</p>
+
+<pre><code class="language-go">// formatURL receive our base URL and the link that
+// we want to format.
+func formatURL(base, url string) string {
+	base = strings.TrimSuffix(base, &quot;/&quot;)
+
+  // As you can see, we are applying the rules
+  // we have defined above to parse our links.
+
+	switch {
+	case strings.HasPrefix(url, &quot;/&quot;):
+		return base + url
+	case strings.HasPrefix(url, &quot;#&quot;):
+		return base + &quot;/&quot; + url
+	case !strings.HasPrefix(url, &quot;http&quot;):
+		return &quot;https://&quot; + url
+	default:
+		return url
+	}
+}
+</code></pre>
+
+<h3 id="checking-each-link">Checking each link</h3>
+
+<p>Now it&rsquo;s time to check that each link works. For this we&rsquo;re going to make an HTTP GET request and we&rsquo;re going to print the received status code next to the link in question:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+	&quot;strings&quot;
+
+	&quot;golang.org/x/net/html&quot;
+)
+
+func main() {
+	if len(os.Args) &lt;= 1 {
+		log.Printf(&quot;not enough arguments provided&quot;)
+		os.Exit(1)
+	}
+
+	url := os.Args[1]
+	url = &quot;https://&quot; + url // We &quot;parse&quot; our URL.
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Printf(&quot;while creating a new request for %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	client := &amp;http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Printf(&quot;while making request to %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf(&quot;response status is not %v&quot;, http.StatusOK)
+		os.Exit(1)
+	}
+
+	doc, err := html.Parse(resp.Body)
+	if err != nil {
+		log.Printf(&quot;while parsing the response body from %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	links := findLinks(nil, doc)
+
+	for _, l := range links {
+		fl := formatURL(url, l) // Our formatted link
+		req, err := http.NewRequest(http.MethodGet, fl, nil)
+		if err != nil {
+			log.Printf(&quot;while creating a new request for %q: %v&quot;, fl, err)
+			continue
+		}
+
+		resp, err := client.Do(req)
+		if err != nil {
+			log.Printf(&quot;while making request to %q: %v&quot;, fl, err)
+			continue
+		}
+		resp.Body.Close()
+
+		fmt.Println(resp.StatusCode, fl)
+	}
+}
+</code></pre>
+
+<blockquote>
+<p>You can grab and refactor all the code inside the for loop in a function called <code>check</code>, for example. In this case I won&rsquo;t do it for the sake of brevity.</p>
+</blockquote>
+
+<h3 id="our-final-code">Our final code</h3>
+
+<p>Our final code should look something like:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+	&quot;strings&quot;
+
+	&quot;golang.org/x/net/html&quot;
+)
+
+func main() {
+	if len(os.Args) &lt;= 1 {
+		log.Printf(&quot;not enough arguments provided&quot;)
+		os.Exit(1)
+	}
+
+	url := os.Args[1]
+	url = &quot;https://&quot; + url // We &quot;parse&quot; our URL.
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Printf(&quot;while creating a new request for %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	client := &amp;http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Printf(&quot;while making request to %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Printf(&quot;response status is not %v&quot;, http.StatusOK)
+		os.Exit(1)
+	}
+
+	doc, err := html.Parse(resp.Body)
+	if err != nil {
+		log.Printf(&quot;while parsing the response body from %q: %v&quot;, url, err)
+		os.Exit(1)
+	}
+
+	links := findLinks(nil, doc)
+
+	for _, l := range links {
+		fl := formatURL(url, l) // Our formatted link
+		req, err := http.NewRequest(http.MethodGet, fl, nil)
+		if err != nil {
+			log.Printf(&quot;while creating a new request for %q: %v&quot;, fl, err)
+			continue
+		}
+
+		resp, err := client.Do(req)
+		if err != nil {
+			log.Printf(&quot;while making request to %q: %v&quot;, fl, err)
+			continue
+		}
+		defer resp.Body.Close()
+
+		fmt.Println(resp.StatusCode, fl)
+	}
+}
+
+func findLinks(links []string, n *html.Node) []string {
+	if n.Type == html.ElementNode &amp;&amp; n.Data == &quot;a&quot; {
+		for _, a := range n.Attr {
+			if a.Key == &quot;href&quot; {
+				links = append(links, a.Val)
+			}
+		}
+	}
+
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		links = findLinks(links, c)
+	}
+
+	return links
+}
+
+func formatURL(base, url string) string {
+	base = strings.TrimSuffix(base, &quot;/&quot;)
+
+	switch {
+	case strings.HasPrefix(url, &quot;/&quot;):
+		return base + url
+	case strings.HasPrefix(url, &quot;#&quot;):
+		return base + &quot;/&quot; + url
+	case !strings.HasPrefix(url, &quot;http&quot;):
+		return &quot;https://&quot; + url
+	default:
+		return url
+	}
+}
+</code></pre>
+
+<h3 id="optional-steps">Optional steps</h3>
+
+<p>The code in this post has many aspects that you can improve, for example:</p>
+
+<ul>
+<li>Concurrency.</li>
+<li>Tests.</li>
+<li>Better error handling.</li>
+</ul>
+
+<blockquote>
+<p>In future posts I&rsquo;ll tal about the three previous points but if you want to improve the code already, you can just get on with it.</p>
+</blockquote>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://dev.to/healeycodes/build-a-python-bot-to-find-your-website-s-dead-links-563c">Inspiring article</a></li>
+<li><a href="https://github.com/danielkvist/kelsier">Kelsier</a>.</li>
+<li><a href="https://dev.to/teekay/everything-you-need-to-know-about-tree-data-structures-2599">Everything about trees</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Tree_traversal">Tree traversal</a>.</li>
+<li><a href="https://www.scrapingninja.co/blog/web-scraping-without-getting-blocked">Guide to web scraping in 2019</a>.</li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/doubly-linked-lists-golang/">
+          <span class="button__text">Doubly linked lists in Go</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Finding dead links in a Website with Go</title>
+      <link>/posts/findind-dead-links-with-golang/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/findind-dead-links-with-golang/</guid>
+      <description>First things first The idea behind this article comes from my experience building Kelsier, which idea itself comes from this article.
+The code that I&amp;rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&amp;rsquo;t think is entirely ideal or there&amp;rsquo;s something you know can be done in a better way, let me know by opening an issue in the repository of this site.</description>
+    </item>
     
     <item>
       <title>Doubly linked lists in Go</title>
