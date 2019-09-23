@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bot on Dkvist</title>
+    <link>/tags/bot/</link>
+    <description>Recent content in bot on Dkvist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making a very simple Telegram bot with Golang</title>
+      <link>/posts/simple-telegram-bot-with-golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/simple-telegram-bot-with-golang/</guid>
+      <description> First things first What is Telegram What is a Telegram bot Why we would want to write a Telegram bot How to get a Telegram token Building our Telegram bot Server and client Handling messages Sending back a response Sending back multiple responses Our final code Optional steps Useful links </description>
+    </item>
+    
+  </channel>
+</rss>

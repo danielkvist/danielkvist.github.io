@@ -72,6 +72,10 @@
   </url>
   
   <url>
+    <loc>/tags/bot/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
   </url>
   
@@ -80,7 +84,15 @@
   </url>
   
   <url>
+    <loc>/posts/simple-telegram-bot-with-golang/</loc>
+  </url>
+  
+  <url>
     <loc>/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/telegram/</loc>
   </url>
   
 </urlset>

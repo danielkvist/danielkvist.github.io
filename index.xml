@@ -73,13 +73,22 @@ If you have had any problems or have any suggestions for the different projects 
     </item>
     
     <item>
+      <title>Making a very simple Telegram bot with Golang</title>
+      <link>/posts/simple-telegram-bot-with-golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/simple-telegram-bot-with-golang/</guid>
+      <description> First things first What is Telegram What is a Telegram bot Why we would want to write a Telegram bot How to get a Telegram token Building our Telegram bot Server and client Handling messages Sending back a response Sending back multiple responses Our final code Optional steps Useful links </description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
       <description>Here is a list with my most recent projects. You can find the rest of them in my GitHub account.
-Botio Botio is a simple and opinionated CLI to create and manage easily bots for different platforms. It allows the user to create easily a server with a REST API to manage a list of commands that then, clients such as a Telegram bot can use to reply to users of that bot.</description>
+Botio - CLI for different bots platforms Botio is a simple and opinionated CLI to create and manage easily bots for different platforms. It allows the user to create easily a server with a REST API to manage a list of commands that then, clients such as a Telegram bot can use to reply to users of that bot.</description>
     </item>
     
   </channel>
