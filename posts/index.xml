@@ -51,14 +51,5 @@ The code that I&amp;rsquo;m going to show below is very likely to have and will 
 What I am going to talk about I&amp;rsquo;m going to write about almost everything. But above all, about software development, Go and myself. I know it doesn&amp;rsquo;t sound very interesting or very original. But well, I didn&amp;rsquo;t say it&amp;rsquo;s going to be either.</description>
     </item>
     
-    <item>
-      <title>Making a very simple Telegram bot with Golang</title>
-      <link>/posts/simple-telegram-bot-with-golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/simple-telegram-bot-with-golang/</guid>
-      <description> First things first What is Telegram What is a Telegram bot Why we would want to write a Telegram bot How to get a Telegram token Building our Telegram bot Server and client Handling messages Sending back a response Sending back multiple responses Our final code Optional steps Useful links </description>
-    </item>
-    
   </channel>
 </rss>
