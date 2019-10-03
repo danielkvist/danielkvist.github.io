@@ -202,7 +202,7 @@ if (!doNotTrack) {
 <pre><code class="language-go">Type Node struct {
     value int   // Our data
     pre   *Node // Pointer to the previous Node
-    next *Node  // Pointer to the next Node
+    next  *Node // Pointer to the next Node
 }
 </code></pre>
 
@@ -274,7 +274,7 @@ func (dl *DoublyLinkedList) Prepend(n *Node) {
 
 <h3 id="lookup">Lookup</h3>
 
-<pre><code class="language-go">// Lookup ranges over the DoublyLinkedLIst and returns
+<pre><code class="language-go">// Lookup ranges over the DoublyLinkedList and returns
 // a []int with all the values found.
 func (dl *DoublyLinkedList) Lookup() []int {
     if dl.length == 0 {

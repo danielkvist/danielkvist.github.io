@@ -6,6 +6,7 @@
     <description>Recent content in telegram on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/telegram/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,10 +14,11 @@
     <item>
       <title>Making a very simple Telegram bot with Golang</title>
       <link>/posts/simple-telegram-bot-with-golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/simple-telegram-bot-with-golang/</guid>
-      <description> First things first What is Telegram What is a Telegram bot Why we would want to write a Telegram bot How to get a Telegram token Building our Telegram bot Server and client Handling messages Sending back a response Sending back multiple responses Our final code Optional steps Useful links </description>
+      <description>First things first This days I&amp;rsquo;m working on Botio. An opinionated CLI to build and manage bots and their commands for different platforms among which is Telegram. And it&amp;rsquo;s from working on Botio that this article comes from.
+I would also like to warm you that the code below may seem at first glance too simple and therefore disappoint a little. If that&amp;rsquo;s your case, I&amp;rsquo;m sorry. In this article I just want to lay the groundwork for future articles that (I hope) might interest you a bit more.</description>
     </item>
     
   </channel>
