@@ -48,20 +48,20 @@
     </item>
     
     <item>
-      <title>web</title>
-      <link>/tags/web/</link>
-      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>scraping</title>
       <link>/tags/scraping/</link>
       <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/scraping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>/tags/web/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/web/</guid>
       <description></description>
     </item>
     
