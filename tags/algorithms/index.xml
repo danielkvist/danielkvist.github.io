@@ -17,7 +17,7 @@
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/bubble-sort-golang/</guid>
-      <description>What is Bubble sort The Bubble sort algorithm is one of the most simple sorting algorithms out there. It repeatedly steps trough a list of elements, compares adjacent elements and swaps them if they are in the wrong order. Yeah, or at least that&amp;rsquo;s what Wikipedia just says.
+      <description>What is Bubble sort The Bubble sort algorithm is one of the most simple sorting algorithms out there. It repeatedly steps trough a list of elements, compares adjacent elements and swaps them if they are in the wrong order. Or at least that&amp;rsquo;s what Wikipedia just says.
 I know that you already know what a Bubble sort algorithm is Bubble sort is one of the most famous algorithms in the world.</description>
     </item>
     
