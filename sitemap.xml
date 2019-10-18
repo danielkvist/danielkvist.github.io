@@ -3,32 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/algorithms/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/bubble-sort-golang/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/bot/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/go/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/simple-telegram-bot-with-golang/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
   
