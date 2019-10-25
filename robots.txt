@@ -1,1 +1,4 @@
+Sitemap: https://dkvist.com/sitemap.xml
+
 User-agent: *
+Crawl-delay: 5
