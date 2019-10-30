@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Coming back to Windows 10 after 5 years using Linux to discover Chocolatey :: Dkvist — Gopher &amp; Ukulelist</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
+It was a couple of years later when I decided to use only Linux."/>
+<meta name="keywords" content="go, golang, developer, dev, job"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/chocolatey/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Coming back to Windows 10 after 5 years using Linux to discover Chocolatey :: Dkvist — Gopher &amp; Ukulelist" />
+<meta name="twitter:description" content="5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
+It was a couple of years later when I decided to use only Linux." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Danielkvist" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Coming back to Windows 10 after 5 years using Linux to discover Chocolatey :: Dkvist — Gopher &amp; Ukulelist">
+<meta property="og:description" content="5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
+It was a couple of years later when I decided to use only Linux." />
+<meta property="og:url" content="/posts/chocolatey/" />
+<meta property="og:site_name" content="Coming back to Windows 10 after 5 years using Linux to discover Chocolatey" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-10-30 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-132778988-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Dkvist
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/chocolatey/">Coming back to Windows 10 after 5 years using Linux to discover Chocolatey</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-10-30
+    </span>
+    
+    
+    <span class="post-author">::
+      Danielkvist
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/windows/">windows</a>&nbsp;
+    
+    #<a href="/tags/misc/">misc</a>&nbsp;
+    
+    #<a href="/tags/chocolatey/">chocolatey</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="5-years-using-linux">5 Years using Linux</h2>
+
+<p>I started using Linux more than 5 years ago. In fact, my first distribution was <a href="https://en.wikipedia.org/wiki/Ubuntu_version_history#1010">Ubuntu 10.10</a>. Ubuntu version on which Unity debuted for the first time (a GUI that I&rsquo;ll never forget, though that&rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&rsquo;t really consider it a jump.</p>
+
+<p>It was a couple of years later when I decided to use only Linux. And the truth is, it was as good ad it was a bad idea.</p>
+
+<p>At that time I learned a lot about how computers work, what programming really was and how I could get the most out of my computer. The bad part is that I learned all of that by force, quickly and usually badly. Luckily I was younger and had the energy to solve all the problems I was generating myself.</p>
+
+<p>And step by step, with effort and constancy. I learned to really love Linux, the terminal and finally, the terminal again.</p>
+
+<p>But then&hellip; why go back to Windows?</p>
+
+<h2 id="coming-back-to-windows-10">Coming back to Windows 10</h2>
+
+<p>There are many things that I really love about Linux, and there are also things that I just hate. But they&rsquo;re not the reason why I&rsquo;m back using Windows.</p>
+
+<p>The real reason is simpler. I bought a new laptop that came with Windows 10 preinstalled (a rarity, I know). And I just decided to stick with it to see how everything had changed in all this time.</p>
+
+<p>And the truth is that the experience is being extremely positive&hellip; except for a few details.</p>
+
+<h2 id="what-i-miss">What I miss</h2>
+
+<p>Basically, the most important thing to me is that the Windows shell is still 💩.</p>
+
+<p>After that realization I remembered that new project that tries to solve it: the <a href="https://github.com/microsoft/terminal">Windows terminal</a>. And before I started using the always reliable shell that comes with Git I decided to take a look at it.</p>
+
+<p>And while the truth is that the new Windows terminal has a lot to offer, but it&rsquo;s still a little green and I just haven&rsquo;t put in all the effort it might need to start enjoying it.</p>
+
+<p>The important thing is that in the process of installing the new Windows terminal I discovered <a href="https://chocolatey.org/">Chocolatey: the package manager for Windows</a>.</p>
+
+<h2 id="discovering-chocolatey">Discovering Chocolatey</h2>
+
+<p>I had actually read things about Chocolatey before going back to Windows. I just haven&rsquo;t paid attention to it until now. And what a nice surprise.</p>
+
+<h2 id="installing-chocolatey">Installing Chocolatey</h2>
+
+<p>I could copy and paste everything the Chocolatey page says about installing it, but instead I&rsquo;d rather leave you a <a href="https://chocolatey.org/install">link</a>.</p>
+
+<p>I really think the process is quite simple, the only thing you don&rsquo;t have to forget is to run the whole process in a shell with administrator permissions (not like me the first time&hellip; and well, maybe the also the second).</p>
+
+<h2 id="using-chocolatey">Using Chocolatey</h2>
+
+<p>You can use Chocolatey basically for what it is. Installing and managing software.</p>
+
+<p>You can install <a href="https://chocolatey.org/packages/vim">vim</a> using it:</p>
+
+<pre><code class="language-cmd">choco install vim
+</code></pre>
+
+<p>Or <a href="https://chocolatey.org/packages/golang">Golang</a>:</p>
+
+<pre><code class="language-cmd">choco install golang
+</code></pre>
+
+<p>And if you want to update something:</p>
+
+<pre><code class="language-cmd">choco upgrade golang
+</code></pre>
+
+<blockquote>
+<p>You have the list with all the commands available both in the CLI using the <code>--help</code> flag and in the <a href="https://chocolatey.org/docs">docs</a>.</p>
+</blockquote>
+
+<p>And for the moment, that&rsquo;s all.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ubuntu_version_history#1010">Ubuntu 10.10 Wikipedia&rsquo;s article</a>.</li>
+<li><a href="https://github.com/microsoft/terminal">The new Windows Terminal</a>.</li>
+<li><a href="https://chocolatey.org">Chocolatey&rsquo;s home page</a>.</li>
+<li><a href="https://chocolatey.org/docs">Chocolatey&rsquo;s docs</a>.</li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/bubble-sort-golang/">
+          <span class="button__text">Bubble sort algorithm in Golang</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+<a href="/index.xml" alt="RSS">RSS</a>
+<a href="https://github.com/danielkvist" alt="github">GitHub</a>
+<a href="https://twitter.com/@danielkvist_" alt="twitter">Twitter</a>
+
+  
+</div>
+
+</body>
+</html>

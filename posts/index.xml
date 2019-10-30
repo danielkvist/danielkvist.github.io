@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coming back to Windows 10 after 5 years using Linux to discover Chocolatey</title>
+      <link>/posts/chocolatey/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/chocolatey/</guid>
+      <description>5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
+It was a couple of years later when I decided to use only Linux.</description>
+    </item>
     
     <item>
       <title>Bubble sort algorithm in Golang</title>

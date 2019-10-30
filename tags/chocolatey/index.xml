@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>misc on Dkvist</title>
-    <link>/tags/misc/</link>
-    <description>Recent content in misc on Dkvist</description>
+    <title>chocolatey on Dkvist</title>
+    <link>/tags/chocolatey/</link>
+    <description>Recent content in chocolatey on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/misc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/chocolatey/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>/posts/chocolatey/</guid>
       <description>5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
 It was a couple of years later when I decided to use only Linux.</description>
-    </item>
-    
-    <item>
-      <title>Hello world</title>
-      <link>/posts/hello-world/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/hello-world/</guid>
-      <description>Who I am Well, the truth is, I&amp;rsquo;m a person who doesn&amp;rsquo;t like to repeat myself too much. So I&amp;rsquo;ll leave here the link to the page where I have already written about who I am.
-What I am going to talk about I&amp;rsquo;m going to write about almost everything. But above all, about software development, Go and myself. I know it doesn&amp;rsquo;t sound very interesting or very original. But well, I didn&amp;rsquo;t say it&amp;rsquo;s going to be either.</description>
     </item>
     
   </channel>
