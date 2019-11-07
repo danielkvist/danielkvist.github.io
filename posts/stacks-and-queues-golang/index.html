@@ -212,9 +212,9 @@ if (!doNotTrack) {
 <li><p>A pointer to the next Node.</p>
 
 <pre><code class="language-go">type Node struct {
-value int
-pre   *Node
-next  *Node
+	value int
+	pre   *Node
+	next  *Node
 }
 </code></pre></li>
 </ul>
@@ -336,7 +336,7 @@ func (s *Stack) Pop() *Node {
 	preLast := s.last.pre
 	s.last = preLast
 	preLast.next = nil
-    s.length--
+	s.length--
 
 	return node
 }
