@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Stacks and Queues in Go :: Dkvist — Gopher &amp; Ukulelist</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="LIFO and FIFO structures LIFO is an abbreviation for &amp;ldquo;last in, first out&amp;rdquo;. While FIFO stands for &amp;ldquo;first in, first out&amp;rdquo;. And that&amp;rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.
+Stacks and Queues In CS, a Stack is a data structure with two main operations: push (or add) and pop (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is last in, first out."/>
+<meta name="keywords" content="go, golang, developer, dev, job"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/stacks-and-queues-golang/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Stacks and Queues in Go :: Dkvist — Gopher &amp; Ukulelist" />
+<meta name="twitter:description" content="LIFO and FIFO structures LIFO is an abbreviation for &amp;ldquo;last in, first out&amp;rdquo;. While FIFO stands for &amp;ldquo;first in, first out&amp;rdquo;. And that&amp;rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.
+Stacks and Queues In CS, a Stack is a data structure with two main operations: push (or add) and pop (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is last in, first out." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="Danielkvist" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Stacks and Queues in Go :: Dkvist — Gopher &amp; Ukulelist">
+<meta property="og:description" content="LIFO and FIFO structures LIFO is an abbreviation for &amp;ldquo;last in, first out&amp;rdquo;. While FIFO stands for &amp;ldquo;first in, first out&amp;rdquo;. And that&amp;rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.
+Stacks and Queues In CS, a Stack is a data structure with two main operations: push (or add) and pop (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is last in, first out." />
+<meta property="og:url" content="/posts/stacks-and-queues-golang/" />
+<meta property="og:site_name" content="Stacks and Queues in Go" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-11-07 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-132778988-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Dkvist
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact</a></li>
+        
+      
+        
+          <li><a href="/projects">Projects</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact</a></li>
+      
+    
+      
+        <li><a href="/projects">Projects</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/stacks-and-queues-golang/">Stacks and Queues in Go</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2019-11-07
+    </span>
+    
+    
+    <span class="post-author">::
+      Danielkvist
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/go/">go</a>&nbsp;
+    
+    #<a href="/tags/data-structure/">data structure</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content">
+    
+
+<h2 id="lifo-and-fifo-structures">LIFO and FIFO structures</h2>
+
+<p>LIFO is an abbreviation for &ldquo;last in, first out&rdquo;. While FIFO stands for &ldquo;first in, first out&rdquo;. And that&rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.</p>
+
+<h2 id="stacks-and-queues">Stacks and Queues</h2>
+
+<p>In CS, a Stack is a data structure with two main operations: <code>push</code> (or add) and <code>pop</code> (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is <strong>last in, first out</strong>. You can think of Stacks in CS as stacks of plates in real life. In fact, that&rsquo;s usually the comparison that&rsquo;s always used.</p>
+
+<p>On the other side, a Queue is a FIFO data structure. That means that the first element to come in, should also be the first element to come out. Another difference between a Stack and a Queue is that in a Queue the two main operations are: <code>enqueue</code> (<code>push</code> in a Stack) and <code>dequeue</code> (<code>pop</code> in a Stack). You can image a queue of people in a supermarket, for example.</p>
+
+<h2 id="why-we-want-to-build-use-stacks-or-queues">Why we want to build/use Stacks or Queues</h2>
+
+<p>Stacks and Queues are two important data structures for two main reasons (at least for me):</p>
+
+<ul>
+<li>The principles of LIFO and FIFO are used constantly in programming.</li>
+<li>Some cache systems usually are best understood if these two data structures have been understood first.</li>
+</ul>
+
+<blockquote>
+<p>Of course, there are many more reasons why its worth learning about these two data structures and the LIFO and FIFO principles. And you&rsquo;re totally free to do a Google search to find them.</p>
+</blockquote>
+
+<h2 id="building-a-stack">Building a Stack</h2>
+
+<p>The first of the two data structures that we&rsquo;re going to build is the Stack. First, we will define its most basic component: a Node. Then we will define the Stack itself with a struct and finally we will add the neccesary methods.</p>
+
+<blockquote>
+<p>In this post the implementation of the Stack will be extremely similar to the implementation of a Doubly Linked List. You can read more about them <a href="https://dkvist.com/posts/doubly-linked-lists-golang/">here</a>.</p>
+</blockquote>
+
+<h3 id="defining-a-node">Defining a Node</h3>
+
+<p>Our implementation of a Node will be very simple and will have:</p>
+
+<ul>
+<li>A value.</li>
+<li>A pointer to the previous Node.</li>
+
+<li><p>A pointer to the next Node.</p>
+
+<pre><code class="language-go">type Node struct {
+value int
+pre   *Node
+next  *Node
+}
+</code></pre></li>
+</ul>
+
+<h3 id="creating-our-stack">Creating our Stack</h3>
+
+<p>Our Stack then will be something like:</p>
+
+<pre><code class="language-go">type Stack struct {
+    first  *Node // First element on the stack.
+    last   *Node // Last element on the stack.
+    length int   // Length of the stack.
+}
+</code></pre>
+
+<h3 id="push">Push</h3>
+
+<p>Now, we&rsquo;re going to implement the <code>push</code> operation:</p>
+
+<pre><code class="language-go">func (s *Stack) Push(n *Node) {
+	if s.length == 0 {
+		s.first = n
+		s.last = n
+		s.length++
+		return
+	}
+
+	last := s.last
+
+	s.last = n
+	s.last.pre = last
+	last.next = n
+	s.length++
+}
+</code></pre>
+
+<h3 id="pop">Pop</h3>
+
+<p>Now it&rsquo;s the turn to implement the <code>pop</code> method:</p>
+
+<pre><code class="language-go">func (s *Stack) Pop() *Node {
+	if s.length == 0 {
+		return nil
+	}
+
+	if s.length == 1 {
+		node := s.first
+		s.first = nil
+		s.length--
+		return node
+	}
+
+	node := s.last
+	preLast := s.last.pre
+	s.last = preLast
+	preLast.next = nil
+    s.length--
+
+	return node
+}
+</code></pre>
+
+<h3 id="peek">Peek</h3>
+
+<p>If you want, you can also implemente a method called <code>peek</code> which only work is to return the first Node in the stack without removing it.</p>
+
+<pre><code class="language-go">func (s *Stack) Peek() *Node {
+	return s.first
+}
+</code></pre>
+
+<h3 id="our-final-code">Our final code</h3>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Node struct {
+	value int
+	pre   *Node
+	next  *Node
+}
+
+type Stack struct {
+	first  *Node
+	last   *Node
+	length int
+}
+
+func (s *Stack) Push(n *Node) {
+	if s.length == 0 {
+		s.first = n
+		s.last = n
+		s.length++
+		return
+	}
+
+	last := s.last
+
+	s.last = n
+	s.last.pre = last
+	last.next = n
+	s.length++
+}
+
+func (s *Stack) Pop() *Node {
+	if s.length == 0 {
+		return nil
+	}
+
+	if s.length == 1 {
+		node := s.first
+		s.first = nil
+		s.length--
+		return node
+	}
+
+	node := s.last
+	preLast := s.last.pre
+	s.last = preLast
+	preLast.next = nil
+    s.length--
+
+	return node
+}
+
+func (s *Stack) Peek() *Node {
+	return s.first
+}
+
+func main() {
+	stack := &amp;Stack{}
+	firstNode := &amp;Node{value: 1}
+	secondNode := &amp;Node{value: 2}
+	thirdNode := &amp;Node{value: 3}
+
+	stack.Push(firstNode)
+	stack.Push(secondNode)
+	stack.Push(thirdNode)
+
+    fmt.Println(stack.Peek())
+
+    stack.Pop()
+    fmt.Println(stack.Peek())
+
+    stack.Pop()
+    fmt.Println(stack.Peek())
+
+    stack.Pop()
+    fmt.Println(stack.Peek())
+}
+</code></pre>
+
+<h3 id="go-playground">Go Playground</h3>
+
+<p>You check the code in the Go Playground click <a href="https://play.golang.org/p/M0V56-n-nId">here</a>.</p>
+
+<h2 id="building-a-queue">Building a Queue</h2>
+
+<p>Now it&rsquo;s the turn of the Queue. As with the Stack, the first thing we&rsquo;re going to define is the Node. Then we will define the Queue itself with a struc and add the neccessary methods.</p>
+
+<blockquote>
+<p>In this case the implementation of the Queue will be extremely similar to the implementation of a Linked List. You can read more about them <a href="https://dkvist.com/posts/linked-lists-golang/">here</a>.</p>
+</blockquote>
+
+<h3 id="defining-a-node-1">Defining a Node</h3>
+
+<p>Our Node will have a value (in this case an <code>integer</code>) and a pointer to the next Node if any.</p>
+
+<pre><code class="language-go">type Node struct {
+	value int
+	next  *Node
+}
+</code></pre>
+
+<h3 id="creating-our-queue">Creating our Queue</h3>
+
+<p>Our Queue then, will be something like:</p>
+
+<pre><code class="language-go">type Queue struct {
+	first  *Node
+	last   *Node
+	length int
+}
+</code></pre>
+
+<h3 id="enqueue">Enqueue</h3>
+
+<p>Now we&rsquo;re going to add to our Queue the <code>enqueue</code> method. Which, if you don&rsquo;t remember, is equivalent to the <code>push</code> method on a Stack.</p>
+
+<pre><code class="language-go">func (q *Queue) Enqueue(n *Node) {
+	if q.length == 0 {
+		q.first = n
+		q.last = n
+		q.length++
+		return
+	}
+
+	last := q.last
+	last.next = n
+	q.last = n
+	q.length++
+	return
+}
+</code></pre>
+
+<h3 id="dequeue">Dequeue</h3>
+
+<p>Time to implement the <code>dequeue</code> method. That again, if you don&rsquo;t remember, is equivalent to the <code>pop</code> method of a Stack.</p>
+
+<pre><code class="language-go">func (q *Queue) Dequeue() *Node {
+	if q.length == 0 {
+		return nil
+	}
+
+	node := q.first
+	q.first = node.next
+	q.length--
+	return node
+}
+</code></pre>
+
+<h3 id="peek-1">Peek</h3>
+
+<p>Finally, our <code>peek</code> method:</p>
+
+<pre><code class="language-go">func (q *Queue) Peek() *Node {
+	return q.first
+}
+</code></pre>
+
+<h3 id="our-final-code-1">Our final code</h3>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Node struct {
+	value int
+	next  *Node
+}
+
+type Queue struct {
+	first  *Node
+	last   *Node
+	length int
+}
+
+func (q *Queue) Enqueue(n *Node) {
+	if q.length == 0 {
+		q.first = n
+		q.last = n
+		q.length++
+		return
+	}
+
+	last := q.last
+	last.next = n
+	q.last = n
+	q.length++
+	return
+}
+
+func (q *Queue) Dequeue() *Node {
+	if q.length == 0 {
+		return nil
+	}
+
+	node := q.first
+	q.first = node.next
+	q.length--
+	return node
+}
+
+func (q *Queue) Peek() *Node {
+	return q.first
+}
+
+func main() {
+	queue := &amp;Queue{}
+	firstNode := &amp;Node{value: 1}
+	secondNode := &amp;Node{value: 2}
+	thirdNode := &amp;Node{value: 3}
+
+	queue.Enqueue(firstNode)
+	queue.Enqueue(secondNode)
+	queue.Enqueue(thirdNode)
+
+	fmt.Println(queue.Peek())
+
+	fmt.Println(queue.Dequeue())
+	fmt.Println(queue.Peek())
+
+	fmt.Println(queue.Dequeue())
+	fmt.Println(queue.Peek())
+
+	fmt.Println(queue.Dequeue())
+	fmt.Println(queue.Peek())
+}
+</code></pre>
+
+<h3 id="go-playground-1">Go Playground</h3>
+
+<p>You check the code in the Go Playground click <a href="https://play.golang.org/p/LfrftvuZPL9">here</a>.</p>
+
+<h2 id="optional-steps">Optional steps</h2>
+
+<p>You can add a <code>lookup</code> method to both the Stack and the Queue. Or implement them with Slices instead of Linked Lists or Doubly Linked Lists.</p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">Wikipedia&rsquo;s article about stacks</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)">Wikipedia&rsquo;s article about queues</a>.</li>
+<li><a href="https://www.geeksforgeeks.org/difference-between-stack-and-queue-data-structures/">Geeksforgeeks&rsquo;s article about the differences between stacks and queues</a>.</li>
+<li><a href="https://ieftimov.com/post/golang-datastructures-stacks-queues/">Ilija Eftimov&rsquo;s article about stacks and queues</a>.</li>
+</ul>
+
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="/posts/chocolatey/">
+          <span class="button__text">Coming back to Windows 10 after 5 years using Linux to discover Chocolatey</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+<a href="/index.xml" alt="RSS">RSS</a>
+<a href="https://github.com/danielkvist" alt="github">GitHub</a>
+<a href="https://twitter.com/@danielkvist_" alt="twitter">Twitter</a>
+
+  
+</div>
+
+</body>
+</html>

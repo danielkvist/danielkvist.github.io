@@ -6,10 +6,20 @@
     <description>Recent content in go on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stacks and Queues in Go</title>
+      <link>/posts/stacks-and-queues-golang/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/stacks-and-queues-golang/</guid>
+      <description>LIFO and FIFO structures LIFO is an abbreviation for &amp;ldquo;last in, first out&amp;rdquo;. While FIFO stands for &amp;ldquo;first in, first out&amp;rdquo;. And that&amp;rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.
+Stacks and Queues In CS, a Stack is a data structure with two main operations: push (or add) and pop (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is last in, first out.</description>
+    </item>
     
     <item>
       <title>Bubble sort algorithm in Golang</title>
