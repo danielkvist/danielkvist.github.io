@@ -6,10 +6,20 @@
     <description>Recent content on Dkvist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How can I improve my coding skills out of my code</title>
+      <link>/posts/how-can-i-improve-out-of-code/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-can-i-improve-out-of-code/</guid>
+      <description>Where this post came from The other day I was training with a friend of mine who in his free time tries to learn how to program that asked me if I could help him to improve his workflow when it comes to learn and to write code.
+At first, frankly, I thought I didn&amp;rsquo;t have much to advice him. Basically because my own workflow is very far from perfect.</description>
+    </item>
     
     <item>
       <title>Stacks and Queues in Go</title>
