@@ -347,6 +347,7 @@ func main() {
 		resp, ok := responses[m.Text]
 		if !ok {
 			client.SendMessage(m.Chat.ID, &quot;I didn't understand you.&quot;)
+			return
 		}
 
 		client.SendMessage(m.Chat.ID, resp())
