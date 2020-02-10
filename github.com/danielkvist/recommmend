@@ -30,11 +30,11 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Recommmend"/>
-<meta name="twitter:description" content="Recommmend is a webapp build using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
+<meta name="twitter:description" content="Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
 It allows users to recommend their favorite artists or to receive anonymous recommendations from other users."/>
 
 <meta property="og:title" content="Recommmend" />
-<meta property="og:description" content="Recommmend is a webapp build using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
+<meta property="og:description" content="Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
 It allows users to recommend their favorite artists or to receive anonymous recommendations from other users." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/recommmend" />
@@ -52,7 +52,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
 
 
 
-<link rel="stylesheet" href="/css/bundle.min.8adca9057b6299d12f78b6d2ca5882939857c194a42f2955a085176f30be990e.css"><body><header class="header">
+<link rel="stylesheet" href="/css/bundle.min.8a531851ecf5b12763ed6948702cf374f15513fe47ada2c66af1f7fb8820f8d6.css"><body><header class="header">
   <div class="header__title">
     <a href="/" class="header__title__link" alt="Home">
       Danielkvist, Front-End Developer
@@ -87,7 +87,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
   </nav>
 </header>
 <main class="single main">
-<p>Recommmend is a webapp build using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.</p>
+<p>Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.</p>
 <p>It allows users to recommend their favorite artists or to receive anonymous recommendations from other users.</p>
 
 </main>
