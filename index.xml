@@ -1,135 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dkvist</title>
+    <title>About on Danielkvist, Front-End Developer</title>
     <link>/</link>
-    <description>Recent content on Dkvist</description>
+    <description>Recent content in About on Danielkvist, Front-End Developer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>How can I improve my coding skills out of my code</title>
-      <link>/posts/how-can-i-improve-out-of-code/</link>
-      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/how-can-i-improve-out-of-code/</guid>
-      <description>Where this post came from The other day I was training with a friend of mine who in his free time tries to learn how to program that asked me if I could help him to improve his workflow when it comes to learn and to write code.
-At first, frankly, I thought I didn&amp;rsquo;t have much to advice him. Basically because my own workflow is very far from perfect.</description>
-    </item>
-    
-    <item>
-      <title>Stacks and Queues in Go</title>
-      <link>/posts/stacks-and-queues-golang/</link>
-      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/stacks-and-queues-golang/</guid>
-      <description>LIFO and FIFO structures LIFO is an abbreviation for &amp;ldquo;last in, first out&amp;rdquo;. While FIFO stands for &amp;ldquo;first in, first out&amp;rdquo;. And that&amp;rsquo;s it. The only important thing about these two terms is to keep them in mind when talking about the following data structures.
-Stacks and Queues In CS, a Stack is a data structure with two main operations: push (or add) and pop (or remove). A Stack is a LIFO structure, that means that the order in which the elements come off the Stack is last in, first out.</description>
-    </item>
-    
-    <item>
-      <title>Coming back to Windows 10 after 5 years using Linux to discover Chocolatey</title>
-      <link>/posts/chocolatey/</link>
-      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/chocolatey/</guid>
-      <description>5 Years using Linux I started using Linux more than 5 years ago. In fact, my first distribution was Ubuntu 10.10. Ubuntu version on which Unity debuted for the first time (a GUI that I&amp;rsquo;ll never forget, though that&amp;rsquo;s another topic). But at that time I was still using Windows 7 along with Ubuntu. So I don&amp;rsquo;t really consider it a jump.
-It was a couple of years later when I decided to use only Linux.</description>
-    </item>
-    
-    <item>
-      <title>Bubble sort algorithm in Golang</title>
-      <link>/posts/bubble-sort-golang/</link>
-      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/bubble-sort-golang/</guid>
-      <description>What is Bubble sort The Bubble sort algorithm is one of the most simple sorting algorithms out there. It repeatedly steps trough a list of elements, compares adjacent elements and swaps them if they are in the wrong order. Or at least that&amp;rsquo;s what Wikipedia just says.
-I know that you already know what a Bubble sort algorithm is Bubble sort is one of the most famous algorithms in the world.</description>
-    </item>
-    
-    <item>
-      <title>Making a very simple Telegram bot with Golang</title>
-      <link>/posts/simple-telegram-bot-with-golang/</link>
-      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/simple-telegram-bot-with-golang/</guid>
-      <description>First things first This days I&amp;rsquo;m working on Botio. An opinionated CLI to build and manage bots and their commands for different platforms among which is Telegram. And it&amp;rsquo;s from working on Botio that this article comes from.
-I would also like to warm you that the code below may seem at first glance too simple and therefore disappoint a little. If that&amp;rsquo;s your case, I&amp;rsquo;m sorry. In this article I just want to lay the groundwork for future articles that (I hope) might interest you a bit more.</description>
-    </item>
-    
-    <item>
-      <title>Finding dead links in a Website with Go</title>
-      <link>/posts/findind-dead-links-with-golang/</link>
-      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/findind-dead-links-with-golang/</guid>
-      <description>First things first The idea behind this article comes from my experience building Kelsier, which idea itself comes from this article.
-The code that I&amp;rsquo;m going to show below is very likely to have and will have aspects that can be improved. So please, if you see something you don&amp;rsquo;t think is entirely ideal or there&amp;rsquo;s something you know can be done in a better way, let me know by opening an issue in the repository of this site.</description>
-    </item>
-    
-    <item>
-      <title>Doubly linked lists in Go</title>
-      <link>/posts/doubly-linked-lists-golang/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/doubly-linked-lists-golang/</guid>
-      <description>What is a Doubly linked list Like Linked lists, Doubly linked lists are a very simple data structure whose definition from Wikipedia is:
- A Doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each Node contains three fields: two link fields (references to the previous and to the next Node in the sequence of nodes) and one data field.</description>
-    </item>
-    
-    <item>
-      <title>Linked lists in Go</title>
-      <link>/posts/linked-lists-golang/</link>
-      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/linked-lists-golang/</guid>
-      <description>What is a Linked list Linked lists are one of the most simpler and basic data structures which are defined by the Wikipedia as follows:
- A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.</description>
-    </item>
-    
-    <item>
-      <title>Hello world</title>
-      <link>/posts/hello-world/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/hello-world/</guid>
-      <description>Who I am Well, the truth is, I&amp;rsquo;m a person who doesn&amp;rsquo;t like to repeat myself too much. So I&amp;rsquo;ll leave here the link to the page where I have already written about who I am.
-What I am going to talk about I&amp;rsquo;m going to write about almost everything. But above all, about software development, Go and myself. I know it doesn&amp;rsquo;t sound very interesting or very original. But well, I didn&amp;rsquo;t say it&amp;rsquo;s going to be either.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>/about/</link>
+      <title>Other projects</title>
+      <link>/codepen.io/danielkvist</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
-      <description>Hello there If you&amp;rsquo;re reading this I guess it&amp;rsquo;s because you&amp;rsquo;ve asked yourself the same question that I&amp;rsquo;ve sometimes asked myself at 3 o&amp;rsquo;clock in the morning: &amp;ldquo;Who am I?&amp;rdquo;. And although the answer to such questions is always complicated, I will try to answer as simply as possible.
-Who I am now, right now I&amp;rsquo;m a 25-year-old boy who has decided that his next job is going to be as a developer.</description>
+      <guid>/codepen.io/danielkvist</guid>
+      <description>Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun.</description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>/contact/</link>
+      <title>Recommmend</title>
+      <link>/github.com/danielkvist/recommmend</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/contact/</guid>
-      <description>To contact me you can send me an email to: danielkvist@protonmail.com.
-Every morning and evening I check the mail so you can expect an answer from me every day in that time frame.
-If you have had any problems or have any suggestions for the different projects I have in my GitHub please do not send me an email. Open a new issue in the correspondent repository.</description>
+      <guid>/github.com/danielkvist/recommmend</guid>
+      <description>Recommmend is a webapp build using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
+It allows users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/projects/</link>
+      <title>Beagle</title>
+      <link>/github.com/danielkvist/beagle</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/projects/</guid>
-      <description>Here is a list with my most recent projects. You can find the rest of them in my GitHub account.
-Botio - CLI for different bots platforms Botio is a simple and opinionated CLI to create and manage easily bots for different platforms. It allows the user to create easily a server with a REST API to manage a list of commands that then, clients such as a Telegram bot can use to reply to users of that bot.</description>
+      <guid>/github.com/danielkvist/beagle</guid>
+      <description>Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy.</description>
+    </item>
+    
+    <item>
+      <title>Botio</title>
+      <link>/github.com/danielkvist/botio</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/botio</guid>
+      <description>Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT.</description>
+    </item>
+    
+    <item>
+      <title>Piercer</title>
+      <link>/github.com/danielkvist/hugo-piercer-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-piercer-theme</guid>
+      <description>Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&amp;rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site.</description>
+    </item>
+    
+    <item>
+      <title>Terrassa</title>
+      <link>/github.com/danielkvist/hugo-terrassa-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-terrassa-theme</guid>
+      <description>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form.</description>
+    </item>
+    
+    <item>
+      <title>Tania</title>
+      <link>/github.com/danielkvist/hugo-tania-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-tania-theme</guid>
+      <description>Tania is a simple and clean theme for Hugo, the framework for building static websites. It&amp;rsquo;s still in development but it shows that I know how to use the basics of CSS Grid and CSS Flexbox as well as develop lightweight and responsive web pages without the need for external frameworks.</description>
     </item>
     
   </channel>

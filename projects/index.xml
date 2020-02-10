@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Danielkvist, Front-End Developer</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Danielkvist, Front-End Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Other projects</title>
+      <link>/codepen.io/danielkvist</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/codepen.io/danielkvist</guid>
+      <description>Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun.</description>
+    </item>
+    
+    <item>
+      <title>Recommmend</title>
+      <link>/github.com/danielkvist/recommmend</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/recommmend</guid>
+      <description>Recommmend is a webapp build using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
+It allows users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
+    </item>
+    
+    <item>
+      <title>Beagle</title>
+      <link>/github.com/danielkvist/beagle</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/beagle</guid>
+      <description>Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy.</description>
+    </item>
+    
+    <item>
+      <title>Botio</title>
+      <link>/github.com/danielkvist/botio</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/botio</guid>
+      <description>Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT.</description>
+    </item>
+    
+    <item>
+      <title>Piercer</title>
+      <link>/github.com/danielkvist/hugo-piercer-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-piercer-theme</guid>
+      <description>Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&amp;rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site.</description>
+    </item>
+    
+    <item>
+      <title>Terrassa</title>
+      <link>/github.com/danielkvist/hugo-terrassa-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-terrassa-theme</guid>
+      <description>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form.</description>
+    </item>
+    
+    <item>
+      <title>Tania</title>
+      <link>/github.com/danielkvist/hugo-tania-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-tania-theme</guid>
+      <description>Tania is a simple and clean theme for Hugo, the framework for building static websites. It&amp;rsquo;s still in development but it shows that I know how to use the basics of CSS Grid and CSS Flexbox as well as develop lightweight and responsive web pages without the need for external frameworks.</description>
+    </item>
+    
+  </channel>
+</rss>

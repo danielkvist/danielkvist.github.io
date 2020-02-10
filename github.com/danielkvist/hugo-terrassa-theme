@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, noarchive" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<title>Danielkvist, Front-End Developer</title>
+
+
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132778988-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Terrassa"/>
+<meta name="twitter:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form."/>
+
+<meta property="og:title" content="Terrassa" />
+<meta property="og:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/github.com/danielkvist/hugo-terrassa-theme" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/bundle.min.8adca9057b6299d12f78b6d2ca5882939857c194a42f2955a085176f30be990e.css"><body><header class="header">
+  <div class="header__title">
+    <a href="/" class="header__title__link" alt="Home">
+      Danielkvist, Front-End Developer
+    </a>
+  </div>
+
+  <nav class="nav">
+    <ul class="menu">
+      
+      
+      <li class="menu__item">
+        <a
+          href="/"
+          class="menu__item__link "
+          alt="About"
+        >
+          About
+        </a>
+      </li>
+      
+      <li class="menu__item">
+        <a
+          href="/projects/"
+          class="menu__item__link "
+          alt="Projects"
+        >
+          Projects
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+<main class="single main">
+<p>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form.</p>
+
+</main>
+<footer class="footer">
+  
+  <div class="footer__contact">
+    <p class="footer__header">Contact me at: </p>
+    <a
+      class="footer__contact__mail"
+      href="mailto:danielkvist@protonmail.com"
+      alt="danielkvist@protonmail.com"
+      >danielkvist@protonmail.com</a>
+  </div>
+  
+
+  
+  <div class="footer__social">
+    <p class="footer__header">Find me on: </p>
+    
+    
+
+    
+    
+    
+    <a
+      class="footer__social__link"
+      href="https://codepen.io/danielkvist"
+      alt="codepen"
+      target="_blank"
+      rel="nofollow"
+      >codepen</a> /
+    
+    
+    
+    <a
+      class="footer__social__link"
+      href="https://github.com/danielkvist"
+      alt="github"
+      target="_blank"
+      rel="nofollow"
+      >github</a> /
+    
+    
+    
+    <a
+      class="footer__social__link"
+      href="https://www.linkedin.com/in/daniel-zaragoza-006797172/"
+      alt="linkedin"
+      target="_blank"
+      rel="nofollow"
+      >linkedin</a> /
+    
+    
+    
+    <a
+      class="footer__social__link"
+      href="https://www.twitter.com/danielkvist_"
+      alt="twitter"
+      target="_blank"
+      rel="nofollow"
+      >twitter</a> /
+    
+    
+    
+  </div>
+  
+</footer>
+</body>
+</html>
