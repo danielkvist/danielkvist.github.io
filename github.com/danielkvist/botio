@@ -50,7 +50,7 @@ if (!doNotTrack) {
 
 
 
-<link rel="stylesheet" href="/css/bundle.min.8a531851ecf5b12763ed6948702cf374f15513fe47ada2c66af1f7fb8820f8d6.css"><body><header class="header">
+<link rel="stylesheet" href="/css/bundle.min.db3408cf6b36d752d2c87ac812f7f62e68a880b62e35f8ad7b5d03aaee41ccc4.css"><body><header class="header">
   <div class="header__title">
     <a href="/" class="header__title__link" alt="Home">
       Danielkvist, Front-End Developer
