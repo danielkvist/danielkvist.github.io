@@ -50,7 +50,7 @@ if (!doNotTrack) {
 
 
 
-<link rel="stylesheet" href="/css/bundle.min.db3408cf6b36d752d2c87ac812f7f62e68a880b62e35f8ad7b5d03aaee41ccc4.css"><body><header class="header">
+<link rel="stylesheet" href="/css/bundle.min.707915f9034c253e2391c89f3666705de41410f1cc2919c9934acdfa0982a78d.css"><body><header class="header">
   <div class="header__title">
     <a href="/" class="header__title__link" alt="Home">
       Danielkvist, Front-End Developer
@@ -65,8 +65,9 @@ if (!doNotTrack) {
         <a
           href="/"
           class="menu__item__link "
+          aria-current=""
           alt="About"
-        >
+          >
           About
         </a>
       </li>
@@ -75,8 +76,9 @@ if (!doNotTrack) {
         <a
           href="/projects/"
           class="menu__item__link "
+          aria-current=""
           alt="Projects"
-        >
+          >
           Projects
         </a>
       </li>
@@ -114,7 +116,7 @@ if (!doNotTrack) {
       href="https://codepen.io/danielkvist"
       alt="codepen"
       target="_blank"
-      rel="nofollow"
+      rel="noopener noreferrer"
       >codepen</a> /
     
     
@@ -124,7 +126,7 @@ if (!doNotTrack) {
       href="https://github.com/danielkvist"
       alt="github"
       target="_blank"
-      rel="nofollow"
+      rel="noopener noreferrer"
       >github</a> /
     
     
@@ -134,7 +136,7 @@ if (!doNotTrack) {
       href="https://www.linkedin.com/in/daniel-zaragoza-006797172/"
       alt="linkedin"
       target="_blank"
-      rel="nofollow"
+      rel="noopener noreferrer"
       >linkedin</a> /
     
     
@@ -144,7 +146,7 @@ if (!doNotTrack) {
       href="https://www.twitter.com/danielkvist_"
       alt="twitter"
       target="_blank"
-      rel="nofollow"
+      rel="noopener noreferrer"
       >twitter</a> /
     
     
