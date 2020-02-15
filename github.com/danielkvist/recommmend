@@ -67,7 +67,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
         <a
           href="/"
           class="menu__item__link "
-          aria-current=""
+          
           alt="About"
           >
           About
@@ -78,7 +78,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
         <a
           href="/projects/"
           class="menu__item__link "
-          aria-current=""
+          
           alt="Projects"
           >
           Projects
