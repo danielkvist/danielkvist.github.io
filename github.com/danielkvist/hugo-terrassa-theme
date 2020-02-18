@@ -30,10 +30,10 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Terrassa"/>
-<meta name="twitter:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form."/>
+<meta name="twitter:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible."/>
 
 <meta property="og:title" content="Terrassa" />
-<meta property="og:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form." />
+<meta property="og:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/hugo-terrassa-theme" />
 
@@ -87,7 +87,7 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible. It has a coherent responsive design, a classic navigation menu in large screens which is replaced by a hamburger menu on small screens and a contact form.</p>
+<p>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible.</p>
 
 </main>
 
