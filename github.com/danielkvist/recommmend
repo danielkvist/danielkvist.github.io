@@ -30,12 +30,10 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Recommmend"/>
-<meta name="twitter:description" content="Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
-It allows users to recommend their favorite artists or to receive anonymous recommendations from other users."/>
+<meta name="twitter:description" content="Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users."/>
 
 <meta property="og:title" content="Recommmend" />
-<meta property="og:description" content="Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
-It allows users to recommend their favorite artists or to receive anonymous recommendations from other users." />
+<meta property="og:description" content="Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/recommmend" />
 
@@ -89,8 +87,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
   </nav>
 </header>
 <main class="single main">
-<p>Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.</p>
-<p>It allows users to recommend their favorite artists or to receive anonymous recommendations from other users.</p>
+<p>Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users.</p>
 
 </main>
 

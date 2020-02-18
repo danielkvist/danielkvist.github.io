@@ -30,10 +30,12 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Piercer"/>
-<meta name="twitter:description" content="Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site."/>
+<meta name="twitter:description" content="Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.
+Like Terrassa it also provides a contact form with support for Netlify forms."/>
 
 <meta property="og:title" content="Piercer" />
-<meta property="og:description" content="Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site." />
+<meta property="og:description" content="Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.
+Like Terrassa it also provides a contact form with support for Netlify forms." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/hugo-piercer-theme" />
 
@@ -87,7 +89,8 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site.</p>
+<p>Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.</p>
+<p>Like Terrassa it also provides a contact form with support for Netlify forms.</p>
 
 </main>
 

@@ -15,7 +15,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/codepen.io/danielkvist</guid>
-      <description>Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun.</description>
+      <description>If my GitHub has run short for you, you can also check my Codepen profile.
+In my Codepen you will find not only minor projects, but also experiments with technologies like React or Vue.</description>
     </item>
     
     <item>
@@ -24,8 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/recommmend</guid>
-      <description>Recommmend is a webapp built using Golang, Buffallo, PostgreSQL, Bootstrap 4 and the Spotify API.
-It allows users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
+      <description>Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/beagle</guid>
-      <description>Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy.</description>
+      <description>Beagle is a poweful but simple-to-use CLI also written in Golang to search for an specific username across the Internet.</description>
     </item>
     
     <item>
@@ -43,7 +43,8 @@ It allows users to recommend their favorite artists or to receive anonymous reco
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/botio</guid>
-      <description>Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT.</description>
+      <description>Botio is one of the projects I&amp;rsquo;ve worked on the longest. It&amp;rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.
+But it doesn&amp;rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT.</description>
     </item>
     
     <item>
@@ -52,7 +53,8 @@ It allows users to recommend their favorite artists or to receive anonymous reco
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/hugo-piercer-theme</guid>
-      <description>Piercer is another theme for Hugo. Is very customizable but also very light and has been designed under the mobile-first philosophy. It&amp;rsquo;s color scheme is based on Dracula and the use of JavaScript is minimal. It also has optional support for PostCSS and Service Workers to cache the site.</description>
+      <description>Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.
+Like Terrassa it also provides a contact form with support for Netlify forms.</description>
     </item>
     
     <item>
@@ -61,7 +63,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/hugo-terrassa-theme</guid>
-      <description>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible.</description>
+      <description>Terrassa is a popular theme for Hugo made to be responsive and accessible. It&amp;rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &amp;ldquo;home&amp;rdquo; sections as you want and, finally, a contact form that can be used with Netlify forms.</description>
     </item>
     
     <item>
@@ -71,7 +73,7 @@ It allows users to recommend their favorite artists or to receive anonymous reco
       
       <guid>/github.com/danielkvist/hugo-tania-theme</guid>
       <description>Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
-Although I have nothing against them and since the goal of this theme is to be as light as possible I don&amp;rsquo;t use any CSS framework like Bootstrap or Bulma. I only use basic technologies such as CSS Grid and CSS Flexbox.</description>
+It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</description>
     </item>
     
   </channel>

@@ -30,10 +30,10 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Beagle"/>
-<meta name="twitter:description" content="Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy."/>
+<meta name="twitter:description" content="Beagle is a poweful but simple-to-use CLI also written in Golang to search for an specific username across the Internet."/>
 
 <meta property="og:title" content="Beagle" />
-<meta property="og:description" content="Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy." />
+<meta property="og:description" content="Beagle is a poweful but simple-to-use CLI also written in Golang to search for an specific username across the Internet." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/beagle" />
 
@@ -87,7 +87,7 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Beagle is another CLI written in Golang to search for an specific username across the Internet. It allows you to customize though flags parameters such as: the user agent used to made the requests, the number of goroutines that you want to use or an URL for a proxy.</p>
+<p>Beagle is a poweful but simple-to-use CLI also written in Golang to search for an specific username across the Internet.</p>
 
 </main>
 

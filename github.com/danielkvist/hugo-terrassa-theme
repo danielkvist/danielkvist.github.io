@@ -30,10 +30,10 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Terrassa"/>
-<meta name="twitter:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible."/>
+<meta name="twitter:description" content="Terrassa is a popular theme for Hugo made to be responsive and accessible. It&rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &ldquo;home&rdquo; sections as you want and, finally, a contact form that can be used with Netlify forms."/>
 
 <meta property="og:title" content="Terrassa" />
-<meta property="og:description" content="Terrassa is a popular theme for Hugo made to be fast, responsive and accessible." />
+<meta property="og:description" content="Terrassa is a popular theme for Hugo made to be responsive and accessible. It&rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &ldquo;home&rdquo; sections as you want and, finally, a contact form that can be used with Netlify forms." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/hugo-terrassa-theme" />
 
@@ -87,7 +87,7 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Terrassa is a popular theme for Hugo made to be fast, responsive and accessible.</p>
+<p>Terrassa is a popular theme for Hugo made to be responsive and accessible. It&rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &ldquo;home&rdquo; sections as you want and, finally, a contact form that can be used with <a href="https://www.netlify.com/">Netlify</a> forms.</p>
 
 </main>
 

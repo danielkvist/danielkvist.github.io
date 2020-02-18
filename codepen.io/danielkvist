@@ -30,10 +30,12 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Other projects"/>
-<meta name="twitter:description" content="Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun."/>
+<meta name="twitter:description" content="If my GitHub has run short for you, you can also check my Codepen profile.
+In my Codepen you will find not only minor projects, but also experiments with technologies like React or Vue."/>
 
 <meta property="og:title" content="Other projects" />
-<meta property="og:description" content="Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun." />
+<meta property="og:description" content="If my GitHub has run short for you, you can also check my Codepen profile.
+In my Codepen you will find not only minor projects, but also experiments with technologies like React or Vue." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/codepen.io/danielkvist" />
 
@@ -87,7 +89,8 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Some of my work do not have their own repository and are in Codepen instead. Here you will be able to find several experiments with CSS, some practical exercises with React and Vue or some experiments done for fun.</p>
+<p>If my GitHub has run short for you, you can also check my Codepen profile.</p>
+<p>In my Codepen you will find not only minor projects, but also experiments with technologies like React or Vue.</p>
 
 </main>
 

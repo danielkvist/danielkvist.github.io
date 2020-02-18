@@ -30,10 +30,12 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Botio"/>
-<meta name="twitter:description" content="Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT."/>
+<meta name="twitter:description" content="Botio is one of the projects I&rsquo;ve worked on the longest. It&rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.
+But it doesn&rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT."/>
 
 <meta property="og:title" content="Botio" />
-<meta property="og:description" content="Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT." />
+<meta property="og:description" content="Botio is one of the projects I&rsquo;ve worked on the longest. It&rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.
+But it doesn&rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/botio" />
 
@@ -87,7 +89,8 @@ if (!doNotTrack) {
   </nav>
 </header>
 <main class="single main">
-<p>Botio is a CLI written in Golang to create and manage easily chatbots for Telegram and Discord powered by Cobra. It supports different databases like PostgreSQL, SQLite 3 or BoltDB and uses the Ristretto cache. The authentication between the chatbots and the server that gives access to the database uses JWT.</p>
+<p>Botio is one of the projects I&rsquo;ve worked on the longest. It&rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.</p>
+<p>But it doesn&rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT.</p>
 
 </main>
 

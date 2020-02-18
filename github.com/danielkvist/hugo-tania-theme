@@ -31,11 +31,11 @@ if (!doNotTrack) {
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tania"/>
 <meta name="twitter:description" content="Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
-Although I have nothing against them and since the goal of this theme is to be as light as possible I don&rsquo;t use any CSS framework like Bootstrap or Bulma. I only use basic technologies such as CSS Grid and CSS Flexbox."/>
+It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox."/>
 
 <meta property="og:title" content="Tania" />
 <meta property="og:description" content="Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
-Although I have nothing against them and since the goal of this theme is to be as light as possible I don&rsquo;t use any CSS framework like Bootstrap or Bulma. I only use basic technologies such as CSS Grid and CSS Flexbox." />
+It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/github.com/danielkvist/hugo-tania-theme" />
 
@@ -90,7 +90,7 @@ Although I have nothing against them and since the goal of this theme is to be a
 </header>
 <main class="single main">
 <p>Tania is a simple and clean theme for <a href="https://gohugo.io/">Hugo</a>, the framework for building static websites. Even though it&rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.</p>
-<p>Although I have nothing against them and since the goal of this theme is to be as light as possible I don&rsquo;t use any CSS framework like Bootstrap or Bulma. I only use basic technologies such as CSS Grid and CSS Flexbox.</p>
+<p>It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</p>
 
 </main>
 
