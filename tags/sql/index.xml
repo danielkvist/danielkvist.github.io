@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>telegram on Danielkvist, Front-End Developer</title>
-    <link>/tags/telegram/</link>
-    <description>Recent content in telegram on Danielkvist, Front-End Developer</description>
+    <title>sql on Danielkvist, Front-End Developer</title>
+    <link>/tags/sql/</link>
+    <description>Recent content in sql on Danielkvist, Front-End Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="/tags/telegram/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recommmend</title>
+      <link>/github.com/danielkvist/recommmend</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/recommmend</guid>
+      <description>Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
+    </item>
     
     <item>
       <title>Botio</title>

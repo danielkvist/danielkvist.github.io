@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Danielkvist, Front-End Developer</title>
+    <link>/tags/golang/</link>
+    <description>Recent content in golang on Danielkvist, Front-End Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recommmend</title>
+      <link>/github.com/danielkvist/recommmend</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/recommmend</guid>
+      <description>Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
+    </item>
+    
+    <item>
+      <title>Beagle</title>
+      <link>/github.com/danielkvist/beagle</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/beagle</guid>
+      <description>Beagle is a poweful but simple to use CLI also written in Golang to search for an specific username across the Internet.</description>
+    </item>
+    
+    <item>
+      <title>Botio</title>
+      <link>/github.com/danielkvist/botio</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/botio</guid>
+      <description>Botio is one of the projects I&amp;rsquo;ve worked on the longest. It&amp;rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.
+But it doesn&amp;rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT.</description>
+    </item>
+    
+  </channel>
+</rss>

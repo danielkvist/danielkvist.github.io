@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>/education/</loc>
+  </url>
+  
+  <url>
     <loc>/github.com/danielkvist/botio</loc>
   </url>
   
@@ -39,11 +43,47 @@
   </url>
   
   <url>
+    <loc>/tags/bootstrap/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/buffalo/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
   </url>
   
   <url>
+    <loc>/tags/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/react/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/sql/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/telegram/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/vue/</loc>
   </url>
   
 </urlset>

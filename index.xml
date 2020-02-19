@@ -34,7 +34,18 @@ In my Codepen you will find not only minor projects, but also experiments with t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/github.com/danielkvist/beagle</guid>
-      <description>Beagle is a poweful but simple-to-use CLI also written in Golang to search for an specific username across the Internet.</description>
+      <description>Beagle is a poweful but simple to use CLI also written in Golang to search for an specific username across the Internet.</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/education/</guid>
+      <description>Education As a self-taught developer most of my education is based on Moocs, online courses, books and tutorials.
+Moocs I have successfully completed MOOCs such as CS50&amp;rsquo;s - Introduction to Computer Science and CS50&amp;rsquo;s - Web Programming with Python and JavaScript and audited others like W3Cx - Introduction to Web Accessibility or CS50&amp;rsquo;s - Mobile App Development with React Native. Mentioning only the most recents.
+Courses I have taken courses on platforms such as freeCodeCamp, Pluralsight, Frontend Master or Udemy about subjects like modern JavaScript, React, Golang, TDD, gRPC, Microservices, PostgreSQL, API design and Docker.</description>
     </item>
     
     <item>

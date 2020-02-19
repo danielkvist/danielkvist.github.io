@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Danielkvist, Front-End Developer</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in hugo on Danielkvist, Front-End Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Piercer</title>
+      <link>/github.com/danielkvist/hugo-piercer-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-piercer-theme</guid>
+      <description>Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.
+Like Terrassa it also provides a contact form with support for Netlify forms.</description>
+    </item>
+    
+    <item>
+      <title>Terrassa</title>
+      <link>/github.com/danielkvist/hugo-terrassa-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-terrassa-theme</guid>
+      <description>Terrassa is a popular theme for Hugo made to be responsive and accessible. It&amp;rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &amp;ldquo;home&amp;rdquo; sections as you want and, finally, a contact form that can be used with Netlify forms.</description>
+    </item>
+    
+    <item>
+      <title>Tania</title>
+      <link>/github.com/danielkvist/hugo-tania-theme</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/github.com/danielkvist/hugo-tania-theme</guid>
+      <description>Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
+It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</description>
+    </item>
+    
+  </channel>
+</rss>

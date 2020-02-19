@@ -42,6 +42,7 @@ It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is
 
 
 
+<link rel="icon" href="/favicon.png" />
 
 
 
@@ -52,7 +53,9 @@ It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is
 
 
 
-<link rel="stylesheet" href="/css/bundle.min.d308384f6685cc65931c6fdfa97b424fb686a7d0e74759c3a60b6d11a9f36470.css"><body><header class="header">
+
+
+<link rel="stylesheet" href="/css/bundle.min.dcb8b83a297d48bf5f36f7e51cbb12f9830f31716e97c416e028b62454ebb188.css"><body><header class="header">
   <div class="header__title">
     <a href="/" class="header__title__link" alt="Home">
       Danielkvist, Front-End Developer
@@ -82,6 +85,17 @@ It doesn&rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is
           alt="Projects"
           >
           Projects
+        </a>
+      </li>
+      
+      <li class="menu__item">
+        <a
+          href="/education/"
+          class="menu__item__link "
+          
+          alt="Education"
+          >
+          Education
         </a>
       </li>
       
