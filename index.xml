@@ -10,31 +10,13 @@
     
     
     <item>
-      <title>Other projects</title>
-      <link>/codepen.io/danielkvist</link>
+      <title>Projects</title>
+      <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/codepen.io/danielkvist</guid>
-      <description>If my GitHub has run short for you, you can also check my Codepen profile.
-In my Codepen you will find not only minor projects, but also experiments with technologies like React or Vue.</description>
-    </item>
-    
-    <item>
-      <title>Recommmend</title>
-      <link>/github.com/danielkvist/recommmend</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/github.com/danielkvist/recommmend</guid>
-      <description>Recommmend is a WebApp built using Golang and Buffalo for the back-end, Bootstrap 4 for the front-end and PostgreSQL for the database that connect to the Spotify API to allow its users to recommend their favorite artists or to receive anonymous recommendations from other users.</description>
-    </item>
-    
-    <item>
-      <title>Beagle</title>
-      <link>/github.com/danielkvist/beagle</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/github.com/danielkvist/beagle</guid>
-      <description>Beagle is a poweful but simple to use CLI also written in Golang to search for an specific username across the Internet.</description>
+      <guid>/projects/</guid>
+      <description>Projects Tania Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
+It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</description>
     </item>
     
     <item>
@@ -49,42 +31,12 @@ Courses I have taken courses on platforms such as freeCodeCamp, Pluralsight, Fro
     </item>
     
     <item>
-      <title>Botio</title>
-      <link>/github.com/danielkvist/botio</link>
+      <title>Work with Me</title>
+      <link>/work_with_me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/github.com/danielkvist/botio</guid>
-      <description>Botio is one of the projects I&amp;rsquo;ve worked on the longest. It&amp;rsquo;s a CLI written in Golang to create and manage easily chatbos for Telegram and Discord. It also has support for different databases like PostgreSQL, SQLite 3 and BoltDB and uses Ristretto for the cache.
-But it doesn&amp;rsquo;t just allow you to create bots connected to a database. It provides an intermediate API that allows you to manage the database through secured endpoints with JWT.</description>
-    </item>
-    
-    <item>
-      <title>Piercer</title>
-      <link>/github.com/danielkvist/hugo-piercer-theme</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/github.com/danielkvist/hugo-piercer-theme</guid>
-      <description>Piercer is another theme for Hugo. Is very customizable and light and has been designed under the mobile-first philosophy. It offers support for PostCSS and, like the two previous topics, barely uses JavaScript.
-Like Terrassa it also provides a contact form with support for Netlify forms.</description>
-    </item>
-    
-    <item>
-      <title>Terrassa</title>
-      <link>/github.com/danielkvist/hugo-terrassa-theme</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/github.com/danielkvist/hugo-terrassa-theme</guid>
-      <description>Terrassa is a popular theme for Hugo made to be responsive and accessible. It&amp;rsquo;s a very classic theme with a top navitation bar (menu that switches depending on the viewport size of the device), a hero with the option to add a CTA button, as many &amp;ldquo;home&amp;rdquo; sections as you want and, finally, a contact form that can be used with Netlify forms.</description>
-    </item>
-    
-    <item>
-      <title>Tania</title>
-      <link>/github.com/danielkvist/hugo-tania-theme</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/github.com/danielkvist/hugo-tania-theme</guid>
-      <description>Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
-It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</description>
+      <guid>/work_with_me/</guid>
+      <description></description>
     </item>
     
   </channel>
