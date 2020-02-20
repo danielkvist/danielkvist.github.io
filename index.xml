@@ -30,14 +30,5 @@ Moocs I have successfully completed MOOCs such as CS50&amp;rsquo;s - Introductio
 Courses I have taken courses on platforms such as freeCodeCamp, Pluralsight, Frontend Master or Udemy about subjects like modern JavaScript, React, Golang, TDD, gRPC, Microservices, PostgreSQL, API design and Docker.</description>
     </item>
     
-    <item>
-      <title>Work with Me</title>
-      <link>/work_with_me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/work_with_me/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
