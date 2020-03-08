@@ -5,7 +5,7 @@
     <link>/</link>
     <description>Recent content in About on Danielkvist, Front-End Developer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>© 2020 - Daniel (Danielkvist). Made with &lt;a href=&#34;https://gohugo.io/&#34; alt=&#34;Hugo&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;https://github.com/danielkvist/hugo-tania-theme&#34; alt=&#34;Tania&#34;&gt;Tania&lt;/a&gt; and &lt;a href=&#34;https://www.netlify.com/&#34; alt=&#34;Netlify&#34;&gt;Netlify&lt;/a&gt;.</copyright>
+    <copyright>© 2020 - Daniel (Danielkvist). Made with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;https://github.com/danielkvist/hugo-tania-theme&#34;&gt;Tania&lt;/a&gt; and &lt;a href=&#34;https://www.netlify.com/&#34;&gt;Netlify&lt;/a&gt;.</copyright>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,8 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>Projects Tania Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
-It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible. Only basics CSS properties like CSS Grid and CSS Flexbox.</description>
+      <description>Projects Kitaka Kitaka is a fast, simple and beautiful ready to use starter for Gatsby to build modern websites with offline support.
+Tania Tania is a simple and clean theme for Hugo, the framework for building static websites. Even though it&amp;rsquo;s still on development you can see it working right here, as it is the current theme I am using for my webpage.
+It doesn&amp;rsquo;t use any CSS framework like Bootstrap or Bulma since the goal is to create a theme as light as possible.</description>
     </item>
     
     <item>
